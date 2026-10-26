@@ -70,6 +70,7 @@
     *   *経路*：`承認審査関連業務 ＞ 審査関連情報 ＞ 保険適用される公知申請品目`
     *   *強み*：**「添付文書上は適応外だが、保険審査上は認められている処方」**の裏取り（マト外れな疑義照会を防ぐ最重要1次ソース）。
     ```text
+    # 保険適用される公知申請品目（PMDA）
     https://www.pmda.go.jp/review-services/drug-reviews/review-information/p-drugs/0016.html
     ```
 *   **MID-NET（医療情報データベース）**
@@ -95,6 +96,7 @@ https://jbcs.xsrv.jp/guideline/2022/grade/
 # 日本医療機能評価機構（Minds・医療事故情報・薬局ヒヤリハット統括）
 https://jcqhc.or.jp/
 
+# 医療事故情報・医療安全情報（日本医療機能評価機構）
 https://www.med-safe.jp/
 
 # 厚生労働省：調剤報酬・疑義解釈資料（1次ソース PDF例）
@@ -117,8 +119,10 @@ https://www.mhlw.go.jp/content/12400000/000615888.pdf
 毎年秋（9月末〜10月初頭）に前年分の「年報」が公表される恒例スケジュール。
 *   **【1次:公的】日本医療機能評価機構（公式公文書・疑義照会事例・年報）**：
     ```text
+    # 薬局ヒヤリ・ハット事例収集 年報
     https://www.yakkyoku-hiyari.jcqhc.or.jp/contents/yearreport/index.html
 
+    # 薬局ヒヤリ・ハット 疑義照会事例
     https://www.yakkyoku-hiyari.jcqhc.or.jp/contents/sharing_case/category_gigi.html
     ```
 *   【3次】の解説サイト（GemMed／Medi-UP：ヒヤリハット報告書の高速要約）は → ネット・3次 3-4 に配置。
@@ -126,9 +130,9 @@ https://www.mhlw.go.jp/content/12400000/000615888.pdf
 ### 📊 医薬品供給状況・公的マスタデータベース（データパイプライン用）
 | 種別 | サイト名 | URL（スラッシュ改行） |
 | :--- | :--- | :--- |
-| **出荷調整・供給不足**<br>【1次:公的】 | ・SCUEL DATA（医薬品供給情報）<br>・DrugShortage.jp | https://scueldata.me/ph/<br>https://drugshortage.jp/index.php |
-| **薬価・HOT・JANマスタ**<br>【1次:公的】 | ・診療報酬情報提供サービス（厚労省）<br>・医薬品HOTコードマスター（MEDIS）<br>・日本医薬品一般的名称（JAN）DB<br>・基本マスター（HPDX） | https://shinryohoshu.mhlw.go.jp/shinryohoshu/searchMenu/doSearchInputYp<br>https://www2.medis.or.jp/hcode/<br>https://jpdb.nihs.go.jp/jan/<br>https://www.hpdx.or.jp/smph/seikyushiharai/tensuhyo/kihonmasta/r06/kihonmasta_04.html |
-| **OTC・妊産婦・ドーピング**<br>【1次:公的】 | ・日本一般用医薬品連合会 / OTC版DSU<br>・国立成育医療研究センター（授乳と薬）<br>・日本スポーツ協会（アンチ・ドーピング） | https://www.jsmi.jp/<br>https://www.jfsmi.jp/dsu_info.html<br>https://www.ncchd.go.jp/kusuri/lactation/<br>https://www.japan-sports.or.jp/medicine/doping/tabid537.html |
+| **出荷調整・供給不足**<br>【1次:公的】 | ・SCUEL DATA（医薬品供給情報）<br>・DrugShortage.jp | SCUEL DATA（医薬品供給情報）：https://scueldata.me/ph/<br>DrugShortage.jp：https://drugshortage.jp/index.php |
+| **薬価・HOT・JANマスタ**<br>【1次:公的】 | ・診療報酬情報提供サービス（厚労省）<br>・医薬品HOTコードマスター（MEDIS）<br>・日本医薬品一般的名称（JAN）DB<br>・基本マスター（HPDX） | 診療報酬情報提供サービス（厚労省）：https://shinryohoshu.mhlw.go.jp/shinryohoshu/searchMenu/doSearchInputYp<br>医薬品HOTコードマスター（MEDIS）：https://www2.medis.or.jp/hcode/<br>日本医薬品一般的名称（JAN）DB：https://jpdb.nihs.go.jp/jan/<br>基本マスター（HPDX）：https://www.hpdx.or.jp/smph/seikyushiharai/tensuhyo/kihonmasta/r06/kihonmasta_04.html |
+| **OTC・妊産婦・ドーピング**<br>【1次:公的】 | ・日本一般用医薬品連合会 / OTC版DSU<br>・国立成育医療研究センター（授乳と薬）<br>・日本スポーツ協会（アンチ・ドーピング） | 日本一般用医薬品連合会：https://www.jsmi.jp/<br>OTC版DSU：https://www.jfsmi.jp/dsu_info.html<br>国立成育医療研究センター 授乳と薬：https://www.ncchd.go.jp/kusuri/lactation/<br>日本スポーツ協会 アンチ・ドーピング：https://www.japan-sports.or.jp/medicine/doping/tabid537.html |
 
 ---
 
@@ -143,16 +147,19 @@ https://www.mhlw.go.jp/content/12400000/000615888.pdf
 # 医療情報ネット「ナビイ」（旧ひまわり移行先）
 https://www.iryou.teikyouseido.mhlw.go.jp/znk-web/juminkanja/S2300/initialize
 
-# 厚生労働省・日本救急医学会・東京都：救命救急センター設置状況＆マップ
+# 厚生労働省 救命救急センター設置状況
 https://www.mhlw.go.jp/stf/newpage_32614.html
 
+# 日本救急医学会 救命救急センター一覧
 https://www.jaam.jp/about/shisetsu/qq-center.html
 
+# 救命救急センターマップ（kyumei-map）
 https://kyumei-map.pages.dev/
 
-# 防災・福祉支援（ハザードマップポータル / Tokyo支援ナビ）
+# ハザードマップポータルサイト（防災・福祉支援）
 https://disaportal.gsi.go.jp/
 
+# Tokyo支援ナビ（防災・福祉支援）
 https://www.support-navi.metro.tokyo.lg.jp/top
 ```
 - 奈良県立医大おすすめリンク集は → メーカー・政策 4-3（疾患啓発の補完リンク）に配置。
@@ -224,21 +231,10 @@ graph TD
 #### ③ 現場でのキラーフレーズ（患者さん向け）
 *   「お薬が肝臓で代謝されるため治療中はお酒をお休みしてくださいね。また、このお薬は尿や汗がオレンジ色になるくらい全身の組織にしっかり届く性質があります。そのぶん、お肌も日光（紫外線）に少し敏感になって日焼けや発疹が出やすくなることがあるので、外出時は日焼け止めを塗ったり長袖を着たりして、お肌も守ってあげてくださいね」
 
-### Case 01：リファンピシン（RFP）の必須指導と「3次資料の混入トラップ」
-- **記載日**：2026-10-20 / **更新日**：2026-10-20
-- **臨床注意ティア**：🏆 【Tier 1】（肝機能・最重警戒）
-- **検証ステータス**：🔍 一部疑義あり（3次資料における多剤併用文言の混入）
-
-#### ① 医師が診察中に必ず言うこと（現場のコア指導）
-*   **「肝機能低下のリスクがあるため、リファンピシン服用中は禁酒」**
-    *   *裏付けソース（公的・準1次）*：東京都保健医療局 DOTS資料 / 結核予防会 解説PDF
-    *   *現場でのキラーフレーズ*：「お薬が肝臓で一生懸命処理されるため、肝臓に余計な負担をかけないよう治療中はお酒をお休みしてくださいね。また、おしっこや汗、涙がオレンジ色になりますが、これはお薬そのものの色なのでびっくりしないでくださいね」
-
-#### ② 3次資料の罠（多剤併用療法の文言混入疑惑）
-*   *現象*：クリニックの解説ページ（3次資料） にて、リファンピシンの注意点として「日光過敏症（外出時は日焼け止めや長袖着用が必要）」との記載を発見。
-*   *臨床的考察*：結核の標準治療（HREZ：イソニアジド、リファンピシン、ピラジナミド、エタンブトール）において、典型的な光線過敏症を起こすのは主に**ピラジナミド（PZA）**である。Web記事作成時に「抗結核薬全体の生活指導」がRFP単剤の解説に混入した可能性が高い。ただしRFPでも重篤な薬疹（TEN/SJS等）は起こり得るため、皮膚への注意自体は否定しない。
-*   🎯 **検証の狙い目（1次資料での確認ポイント）**：
-    *   リファンピシンおよびピラジナミドの「添付文書（副作用：皮膚・過敏症）」および「インタビューフォーム（項目別副作用発現頻度）」を直接比較し、光線過敏症の記載有無を確定させる。
+#### ④ 初版の疑義と、1次資料で残る確認点（旧Case 01を本ケースに統合）
+*   *初版の見立て*：クリニックの解説ページ（3次資料）の「日光過敏症（日焼け止め・長袖）」記載は、結核の標準治療（HREZ：イソニアジド、リファンピシン、ピラジナミド、エタンブトール）で典型的な光線過敏症を起こす**ピラジナミド（PZA）**の文言が、RFP単剤の解説に混入した可能性がある、と考えた。ただしRFPでも重篤な薬疹（TEN/SJS等）は起こり得るため、皮膚への注意自体は否定しない。
+*   *禁酒の追加の裏付け（公的・準1次）*：結核予防会 解説PDF（東京都DOTS資料と併せて）。
+*   **検証の狙い目（1次資料での確認ポイント）**：リファンピシンおよびピラジナミドの「添付文書（副作用：皮膚・過敏症）」と「インタビューフォーム（項目別副作用発現頻度）」を直接比較し、光線過敏症の記載有無を確定させる。※現時点で未確認（`docs/source_verification.md` の保留#1・#2）。
 
 ### Case 02：鉄剤と「お茶で飲んでいい説」の裏事情
 - **記載日**：2026-10-20 / **更新日**：2026-10-20
@@ -304,19 +300,19 @@ graph TD
 
 | ティア | 病院名・サイト名 | 公開コンテンツの特徴・強み | URL（スラッシュ改行） |
 | :--- | :--- | :--- | :--- |
-| **🏆 【Tier S】** | **国立がん研究センター中央病院** | **【最強】** 薬剤部トップ、レジメン一覧、および**「レジメンごとの副作用情報パンフ」**まで完全公開 | https://www.ncc.go.jp/jp/ncch/division/pharmacy/index.html<br>▼レジメン：`.../040/regimen/index.html`<br>▼副作用パンフ：`.../010/pamph/index.html` |
-| **🏆 【Tier S】** | **愛媛大学医学部附属病院 薬剤部** | 「DIニュース」のバックナンバーが豊富に公開されており、新薬や同効薬比較の質が極めて高い。 | https://www.hsp.ehime-u.ac.jp/medicine/di_news/ |
-| **🏆 【Tier S】** | **JCHO 熊本総合病院 薬剤部** | 薬薬連携およびDI情報の発信が充実。現場目線のまとまった資料が取得可能。 | https://kumamoto.jcho.go.jp/pharm2/pharmacy2/ |
-| **🥈 【Tier A】** | **東京女子医科大学病院 薬剤部 / 腎臓病総合医療センター** | 薬薬連携ページにて**最新がんレジメン（2025年版PDF等）**を公開。腎臓センターの「腹膜透析」解説も秀逸。 | http://www.twmu.ac.jp/pha/renkei.html<br>http://www.twmu.ac.jp/pha/regimen2025.pdf<br>https://www.twmu.ac.jp/NEP/hukumaku-toseki.html |
-| **🥈 【Tier A】** | **東京女子医大 足立医療センター** | 保険薬局向けページにレジメン一覧を公開 | https://twmu-amc.jp/mce/pharmacy/insurance-pharmacy/regimen.html |
-| **🥈 【Tier A】** | **虎の門病院**（国家公務員共済） | DIアーカイブは非公開だが、**化学療法レジメンPDF**は公開あり | https://toranomon.kkr.or.jp/cms/departments/pharmaceutical/<br>▼レジメンPDF：`.../files/1.pdf` |
-| **🥈 【Tier A】** | **慶應義塾大学病院（腫瘍センター）** | 腫瘍センターにて医療従事者向けレジメン情報を公開 | https://cancercenter.med.keio.ac.jp/medical_info/ |
-| **🥈 【Tier A】** | **東京品川病院** | 薬剤部ページにてレジメン公開 | https://tokyo-shinagawa.jp/department/section/10 |
-| **🥈 【Tier A】** | **厚木市立病院 薬剤部** | 保険薬局向けの連携情報・採用薬・レジメン関連情報を公開。 | https://www.atsugicity-hp.jp/?page_id=46182 |
-| **🥈 【Tier A】** | **佐久総合病院（本院・医療センター）** | 門前・クリニカルパス一覧（入院から退院までの全工程表） | http://www.sakuhp.or.jp/ja/honin/2863/000199.html<br>http://www.sakuhp.or.jp/ja/center/2896/003121.html |
-| **🥈 【Tier A】** | **湘南鎌倉総合病院 薬剤部** | 小児用量・監査：「小児薬用量一覧」PDF | https://www.skgh.jp/wp/wp-content/themes/skgh/department/pharmacy/for-pharmacist/pdf/pediatric-dose.pdf |
-| **🥉 【Tier B】** | **慶應義塾大学病院「KOMPAS」** | 大学病院の専門医が執筆・監修する日本最高峰の医療・健康情報サイト（処方意図・標準治療の理解に最適）。 | https://kompas.hosp.keio.ac.jp/ |
-| **🥉 【Tier B】** | **清水病院 / GI-Cancer** | 消化器がん副作用対策・病院資料 | https://gi-cancer.net/gi/fukusayo/fukusayo_01_2.html<br>https://www.shimizuhospital.com/dist/wp-content/uploads/2012/07/ab042786a41445a542f8654b0b62520e-1.pdf |
+| **🏆 【Tier S】** | **国立がん研究センター中央病院** | **【最強】** 薬剤部トップ、レジメン一覧、および**「レジメンごとの副作用情報パンフ」**まで完全公開 | 薬剤部トップ：https://www.ncc.go.jp/jp/ncch/division/pharmacy/index.html<br>▼レジメン（親URLからの相対表記）：`.../040/regimen/index.html`<br>▼副作用パンフ（親URLからの相対表記）：`.../010/pamph/index.html` |
+| **🏆 【Tier S】** | **愛媛大学医学部附属病院 薬剤部** | 「DIニュース」のバックナンバーが豊富に公開されており、新薬や同効薬比較の質が極めて高い。 | DIニュース（バックナンバー）：https://www.hsp.ehime-u.ac.jp/medicine/di_news/ |
+| **🏆 【Tier S】** | **JCHO 熊本総合病院 薬剤部** | 薬薬連携およびDI情報の発信が充実。現場目線のまとまった資料が取得可能。 | 薬剤部 薬薬連携・DI情報：https://kumamoto.jcho.go.jp/pharm2/pharmacy2/ |
+| **🥈 【Tier A】** | **東京女子医科大学病院 薬剤部 / 腎臓病総合医療センター** | 薬薬連携ページにて**最新がんレジメン（2025年版PDF等）**を公開。腎臓センターの「腹膜透析」解説も秀逸。 | 薬薬連携ページ：http://www.twmu.ac.jp/pha/renkei.html<br>がんレジメン（2025年版PDF）：http://www.twmu.ac.jp/pha/regimen2025.pdf<br>腎臓病総合医療センター 腹膜透析の解説：https://www.twmu.ac.jp/NEP/hukumaku-toseki.html |
+| **🥈 【Tier A】** | **東京女子医大 足立医療センター** | 保険薬局向けページにレジメン一覧を公開 | 保険薬局向け レジメン一覧：https://twmu-amc.jp/mce/pharmacy/insurance-pharmacy/regimen.html |
+| **🥈 【Tier A】** | **虎の門病院**（国家公務員共済） | DIアーカイブは非公開だが、**化学療法レジメンPDF**は公開あり | 薬剤部：https://toranomon.kkr.or.jp/cms/departments/pharmaceutical/<br>▼レジメンPDF（親URLからの相対表記）：`.../files/1.pdf` |
+| **🥈 【Tier A】** | **慶應義塾大学病院（腫瘍センター）** | 腫瘍センターにて医療従事者向けレジメン情報を公開 | 腫瘍センター 医療従事者向け情報：https://cancercenter.med.keio.ac.jp/medical_info/ |
+| **🥈 【Tier A】** | **東京品川病院** | 薬剤部ページにてレジメン公開 | 薬剤部 レジメン：https://tokyo-shinagawa.jp/department/section/10 |
+| **🥈 【Tier A】** | **厚木市立病院 薬剤部** | 保険薬局向けの連携情報・採用薬・レジメン関連情報を公開。 | 薬剤部 保険薬局向け連携情報：https://www.atsugicity-hp.jp/?page_id=46182 |
+| **🥈 【Tier A】** | **佐久総合病院（本院・医療センター）** | 門前・クリニカルパス一覧（入院から退院までの全工程表） | 本院 クリニカルパス一覧：http://www.sakuhp.or.jp/ja/honin/2863/000199.html<br>医療センター クリニカルパス一覧：http://www.sakuhp.or.jp/ja/center/2896/003121.html |
+| **🥈 【Tier A】** | **湘南鎌倉総合病院 薬剤部** | 小児用量・監査：「小児薬用量一覧」PDF | 小児薬用量一覧（PDF）：https://www.skgh.jp/wp/wp-content/themes/skgh/department/pharmacy/for-pharmacist/pdf/pediatric-dose.pdf |
+| **🥉 【Tier B】** | **慶應義塾大学病院「KOMPAS」** | 大学病院の専門医が執筆・監修する日本最高峰の医療・健康情報サイト（処方意図・標準治療の理解に最適）。 | KOMPAS：https://kompas.hosp.keio.ac.jp/ |
+| **🥉 【Tier B】** | **清水病院 / GI-Cancer** | 消化器がん副作用対策・病院資料 | GI-Cancer 消化器がん副作用対策：https://gi-cancer.net/gi/fukusayo/fukusayo_01_2.html<br>清水病院 病院資料（PDF）：https://www.shimizuhospital.com/dist/wp-content/uploads/2012/07/ab042786a41445a542f8654b0b62520e-1.pdf |
 
 ---
 
@@ -329,19 +325,23 @@ graph TD
 1. **『兵庫県喘息死ゼロ作戦』実行委員会（神戸大学医学部附属病院）**
    * デバイスごとの操作方法・指導ポイントの網羅性が全国トップクラス。
    ```text
+   # 兵庫県喘息死ゼロ作戦 吸入指導（神戸大学）
    https://www.med.kobe-u.ac.jp/asthma/medic/inhalation.html
    ```
 2. **高崎健康福祉大学薬学部 臨床薬学研究室（群馬県薬剤師会 吸入指導ページ）**
    * アカデミアと地域薬剤師会が連携した吸入指導の標準ツール・動画・評価表。
    ```text
+   # 群馬県薬剤師会 吸入指導ページ（高崎健康福祉大学）
    https://www.gunyaku.or.jp/public/kyuunyuu/index.html
    ```
 3. **実務薬剤師による吸入薬比較・指導コツ（【3次:薬剤師】）**
    * おじさん薬剤師のブログ（吸入カテゴリ整理） / ヤクザイック / **CloseDi（旧：さがすDI）**
    * CloseDiは、ブログ形式から「現場の薬剤師が毎日使える強力な検索ツール・プラットフォーム」へ移行・進化した（旧 `sagasudi.com` の記事は過去資産として参照）。
    ```text
+   # おじさん薬剤師のブログ 吸入カテゴリ整理
    https://ozisanyakuzaishi.hatsumeiobatchi.com/category1/category13/entry34.html
 
+   # ヤクザイック（yakuzaic）
    https://yakuzaic.com/
 
    # CloseDi（旧：さがすDI）
@@ -351,23 +351,30 @@ graph TD
 ### 💉 デバイス（吸入器・インスリン・エピペン）の期限・保管・廃棄
 *   **吸入器の指導・一覧**（坂戸市薬剤師会資料 / 杏林製薬 開封後期限FAQ）：
     ```text
+    # 坂戸市薬剤師会 吸入器の一覧・指導（PDF）
     https://www.sakakodo.com/download/document/110315inhaler.pdf
 
+    # 杏林製薬 吸入薬の開封後期限FAQ
     https://www.kyorin-pharm.co.jp/prodinfo/faq/details/003615/
     ```
 *   **インスリン製剤の保管・スキルアップ・医療廃棄物**（ノボノルディスク公式 / 福井県内科医会PDF）：
     ※医療廃棄物（針・インスリン本体）は「一般論」「自治体・薬局ルール（廃棄袋管理表）」「メーカー1次資料」を分けて案内する。
     ```text
+    # ノボノルディスク インスリンの保管方法
     https://www.novonordisk.co.jp/products/how-to/injection/how-to/storage.html
 
+    # 福井県内科医会 SkillupDM No.79（PDF）
     https://www.fukui-naikaikai.com/img/2019/11/SkillupDM-No.79.pdf
     ```
 *   **⭐️ エピペン・小児喘息の長期見通し**（環境再生保全機構 ERCA / かくむクリニック / こどもの喘息）：
     ```text
+    # 環境再生保全機構（ERCA） 小児ぜんそくコラム
     https://www.erca.go.jp/yobou/zensoku/sukoyaka/column/202102_2/
 
+    # かくむクリニック 小児喘息の見通し
     https://kakumu-cl.jp/childhoodasthma.html
 
+    # こどもの喘息
     http://www.kodomo.co.jp/asthma/index.htm
     ```
 
@@ -375,8 +382,10 @@ graph TD
 *   **インスリンポンプ療法（CSII/SAP）の仕組みと費用比較**（メドトロニック公式 / 清水糖尿病クリニック：頻回注射との自己負担額比較）：
     *   *価値*：患者が最も気にする「実際毎月いくらかかるのか？」という経済的リアリズムに答えるための必須知識。
     ```text
+    # メドトロニック インスリンポンプ療法（公式）
     https://www.medtronic.com/jp-ja/your-health/treatments-therapies/diabetes/therapy.html
 
+    # 清水糖尿病クリニック インスリンポンプ療法費用（頻回注射との比較）
     https://shimizu-dm.jp/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%AA%E3%83%B3%E3%83%9D%E3%83%B3%E3%83%97%E7%99%82%E6%B3%95%E8%B2%BB%E7%94%A8%EF%BC%88%E9%A0%BB%E5%9B%9E%E6%B3%A8%E5%B0%84%E3%81%A8%E3%81%AE%E6%AF%94%E8%BC%83%EF%BC%89
     ```
 
@@ -407,54 +416,70 @@ graph TD
 ### 🧴 皮膚・ベピオ・湿潤療法NG・PPP
 *   **創傷処置（キズパワーパッド等の湿潤療法を避けるべきケース）**（さいたま外科）：
     ```text
+    # さいたま外科 創傷処置（湿潤療法を避けるべきケース）
     https://saitamageka.com/wound/
     ```
 *   **皮膚科（ベピオゲルの使い方・刺激対策）**（巣鴨千石皮ふ科）：
     ```text
+    # 巣鴨千石皮ふ科 ベピオゲルの使い方・刺激対策
     https://sugamo-sengoku-hifu.jp/medicines/bepio.html
     ```
 *   **掌蹠膿疱症（PPP）患者コミュニティ・治療解説**：
     *   ビオチン療法や生物学的製剤、歯科金属アレルギーなど、患者間のリアルな悩みと治療選択肢の把握に。
     ```text
+    # 掌蹠膿疱症（PPP）患者コミュニティ 治療解説
     https://ppp-community.com/treatment/
     ```
 
 ### 👂 耳鼻科・呼吸器
 *   **耳鼻科・呼吸器（長引く咳、急性扁桃炎、鼻疾患、舌下免疫療法、検査費用目安）**：
     ```text
+    # よし耳鼻咽喉科（長引く咳）
     http://yoshi-ent.jp/
 
+    # えびな耳鼻咽喉科（急性扁桃炎）
     https://ebina-kojiro.com/course/c18/
 
+    # くまがい耳鼻咽喉科（鼻疾患）※名称はURLからの推定
     https://kumagaijibika.com/nose-symptoms-diseases
 
+    # 大井町耳鼻咽喉科（舌下免疫療法等）※名称・項目はURLと記載順からの推定
     https://ooimachi-jibika.com/
 
+    # nagatomo-ent（検査費用の目安）
     https://nagatomo-ent.jp/examination-fees
     ```
 
 ### 🦴 整形・疼痛（石灰沈着性腱板炎・片頭痛スコア）
 *   **整形・疼痛（石灰沈着性腱板炎：30〜60代女性に多い等の疫学）**（オクノクリニック / 頭痛ーる：片頭痛MHI・HITスコア）：
     ```text
+    # オクノクリニック 石灰沈着性腱板炎
     https://okuno-y-clinic.com/itami_qa/calcific_tendinitis.html
 
+    # 頭痛ーる 片頭痛（MHI・HITスコア）
     https://zutool.jp/column/basic/post-26257
     ```
 
 ### 🍽️ 消化器・肝臓・透析・画像検査
 *   **消化器・肝臓・透析・画像検査（ピロリ菌検査工程、B型肝炎、透析患者の熱中症、X線被曝）**：
     ```text
+    # おおくら内科（ピロリ菌検査の工程）※名称はURLからの推定
     https://ohkura-naika.jp/helicobacter_pylori.html
 
+    # なかたクリニック（B型肝炎）※名称はURLからの推定
     http://nakata-cl.jp/hepatitis_b.html
 
+    # toseki.tokyo（透析患者の熱中症）
     https://www.toseki.tokyo/blog/touseki-nechushou/
 
+    # 愛知医科大学病院（X線被曝）※名称はURLからの推定
     https://www.aichi-med-u.ac.jp/hospital/sh15/sh1503/sh150301/sh15030101/sh15030101_16.html
     ```
 
 ### 🔍 未収録の領域（拡充予定）
 循環器・脳・内分泌・メンタル・眼科・漢方の良質解説は未収録（`wishlist.md` に追記済み）。1次資料での裏取りを前提に追加する。
+
+🔍 **URL待ち**：ユーザーから「初期のREADMEにURL一式がある」との連絡があった候補名（日本心臓財団、ハートむつあい、お茶の水内科、丸山病院、オムロン、長崎クリニック、住吉レディス、こころみ、Kyupin、高田眼科、クラシエ、パークサイド、難病情報センター、ICD等）。**このリポジトリの履歴にはそのURLが存在せず、URLを推測で書くことはしない**。元のURL一覧をユーザーが貼り付けた時点で、領域別（循環器・脳・内分泌・メンタル・眼科・漢方）に追記する。
 
 ---
 
@@ -469,25 +494,32 @@ graph TD
 *   **検査値ガイド・Q&A（検査会社・健診機関の準1次〜2次ソース）**【2次:DB/GL】
     *   同友会（健診検査ガイド） / CRCグループ（検査Q&A ※2024.11更新確認）
     ```text
+    # 同友会 健診検査ガイド
     https://www.do-yukai.com/kensa-guide/
 
+    # CRCグループ 検査Q&A
     https://www.crc-group.co.jp/crc/q_and_a/index.html
     ```
 *   **検査値から「一次資料をもとにした生活工夫」への翻訳（大正製薬 Livita / 大正健康ナビ）**【3次:薬剤師】
     *   単なる基準値説明にとどまらず、食事や運動の具体的なアクションプランまで言語化されており、窓口での指導フレーズに直結する。
     ```text
+    # 大正製薬 Livita（検査値と生活の工夫）
     https://brand.taisho.co.jp/contents/livita/236/
 
+    # 大正健康ナビ 健診ガイド（血液検査）
     https://www.taisho-kenko.com/special/kenshin-guide/blood05/
 
+    # 大正健康ナビ 疾患解説
     https://www.taisho-kenko.com/disease/653/
     ```
 
 ### 📰 論文・制度ニュースの高速要約（3次解説）
 *   **【3次:DB解説】GemMed（医療制度・ヒヤリハット報告書の高速要約）** / **Medi-UP**：
     ```text
+    # GemMed（医療制度・ヒヤリハット報告書の要約）
     https://gemmed.ghc-j.com/
 
+    # Medi-UP
     https://mediklect.co.jp/medi-up/about-medi-up/
     ```
 *   一次公文書（日本医療機能評価機構のヒヤリハット年報）は → 1次・公的 1-3。
@@ -499,10 +531,12 @@ graph TD
     *   🚫 **NG行為**：ダウンロードした文献PDFの他者への譲渡、テキストをそのまま抽出してWebサイト（Publicリポジトリ等）へ転載すること。
     *   ⭕️ **OK行為**：事実・知見を自分の言葉で消化した「1行解説・臨床判断メモ」の記録、または著作権許諾サービスを通じた正規利用。
     ```text
+    # メディカルオンライン（くすり・プロダクトDB）
     https://pha.medicalonline.jp/
     ```
 *   **医書.jp（論文サマリー検索・閲覧）** / **PubMed** / **東邦大学・医中誌GLデータベース**
     ```text
+    # 医書.jp 論文サマリー検索
     https://webview.isho.jp/search
     ```
 
@@ -526,6 +560,7 @@ graph TD
 【3次:メーカー】 BIPROGY運営。2026年5月時点で**15社**（第一三共、アステラス、中外、大塚、ファイザー、AZ、杏林、キッセイ、大鵬、大正、帝人、メルク、旭化成、塩野義※資材のみ、小野※資材のみ）が参加。
 ⚠️ **注意**：武田薬品、エーザイ、MSD、ノバルティス、サノフィ等の大手は未参加のため、PhindMI単体では網羅できない。
 ```text
+# PhindMI（製薬協連携・医薬品情報横断検索）FAQ
 https://www.phindmi.com/FAQ/GFAQ01M01.aspx
 ```
 - 未参加大手の直リンク・資材発注URLの網羅は調査中（`wishlist.md` の「要調査」項目）。
@@ -541,10 +576,10 @@ https://www.phindmi.com/FAQ/GFAQ01M01.aspx
 
 | カテゴリ・企業名 | 用途・特徴（HCPサイト名・格納階層） | URL（スラッシュ改行） |
 | :--- | :--- | :--- |
-| **製薬協（JPMA）**<br>【3次:メーカー】 | 加盟企業リンク一覧 ＆ くすり相談窓口一覧 | https://www.jpma.or.jp/about/member/company/index.html<br>https://www.jpma.or.jp/information/consumer/contact/index.html |
-| **RAD-AR（くすりのしおり）**<br>【3次:メーカー】 | 資材連携ニュース ＆ 活用サービス一覧 | https://www.rad-ar.or.jp/topics/post?id=e1dbde9439666367a40002b6<br>https://www.rad-ar.or.jp/siori/about/users/ |
-| **杏林製薬（モデルケース）**<br>【3次:メーカー】 | HCP：Kyorin Medical Bridge（ドクターサロン、アポトーク、RMD資材、リフヌア等製品サイト） | https://www.kyorin-medicalbridge.jp/library/apotalk/<br>https://www.med.kyorin-rmd.com/material/<br>https://www.lyfnua.jp/ |
-| **ニプロ / 丸石 / シスメックス**<br>【3次:メーカー】 | 資材オーダー（ニプロ）、医療ナレッジ（丸石）、プライマリケア・皮膚検査（シスメックス） | https://order.nipro.co.jp/items<br>https://www.maruishi-pharm.co.jp/medical/newsrelease?news-type=knowledge<br>https://primary-care.sysmex.co.jp/hcp/ |
+| **製薬協（JPMA）**<br>【3次:メーカー】 | 加盟企業リンク一覧 ＆ くすり相談窓口一覧 | 加盟企業リンク一覧：https://www.jpma.or.jp/about/member/company/index.html<br>くすり相談窓口一覧：https://www.jpma.or.jp/information/consumer/contact/index.html |
+| **RAD-AR（くすりのしおり）**<br>【3次:メーカー】 | 資材連携ニュース ＆ 活用サービス一覧 | 資材連携ニュース：https://www.rad-ar.or.jp/topics/post?id=e1dbde9439666367a40002b6<br>くすりのしおり 活用サービス一覧：https://www.rad-ar.or.jp/siori/about/users/ |
+| **杏林製薬（モデルケース）**<br>【3次:メーカー】 | HCP：Kyorin Medical Bridge（ドクターサロン、アポトーク、RMD資材、リフヌア等製品サイト） | Kyorin Medical Bridge（アポトーク）：https://www.kyorin-medicalbridge.jp/library/apotalk/<br>杏林RMD 資材：https://www.med.kyorin-rmd.com/material/<br>リフヌア 製品サイト：https://www.lyfnua.jp/ |
+| **ニプロ / 丸石 / シスメックス**<br>【3次:メーカー】 | 資材オーダー（ニプロ）、医療ナレッジ（丸石）、プライマリケア・皮膚検査（シスメックス） | ニプロ 資材オーダー：https://order.nipro.co.jp/items<br>丸石製薬 医療ナレッジ：https://www.maruishi-pharm.co.jp/medical/newsrelease?news-type=knowledge<br>シスメックス プライマリケア（HCP）：https://primary-care.sysmex.co.jp/hcp/ |
 | **バイオシミラー**<br>【3次:メーカー】 | バイオシミラー協議会 解説PDF | https://www.biosimilar.jp/pdf/taidan2.pdf |
 
 - 🔍未収録：管理薬剤師.com（`wishlist.md` に追記。URLは確認のうえ追加する）。
@@ -584,8 +619,8 @@ https://www.phindmi.com/FAQ/GFAQ01M01.aspx
 
 ### 🧠 医療政策・ヘルスケアDX シンクタンク（制度改定・トレンド予測の狙い目）
 調剤報酬改定や2027年以降のOTC類似薬・医療DXの動向を先読みするためのレポート群。
-*   **野村総合研究所（NRI）**：https://www.nri.com/jp/knowledge/report/list.html
-*   **ニッセイ基礎研究所（医療・介護）**：https://www.nli-research.co.jp/report_category/tag_category_id=41?site=nli
+- **野村総合研究所（NRI）** 【3次:メーカー】 知見・レポート一覧 → https://www.nri.com/jp/knowledge/report/list.html
+- **ニッセイ基礎研究所（医療・介護）** 【3次:メーカー】 医療・介護分野のレポート → https://www.nli-research.co.jp/report_category/tag_category_id=41?site=nli
 *   **その他注目シンクタンク（検証候補）**：三菱総合研究所（MRI：医療DX・予防）、みずほリサーチ＆テクノロジーズ（厚労省受託調査・データヘルス）、日本総合研究所（地域医療・社会保障）、日本医療政策機構（HGPI：AMR・がん・メンタルヘルス提言）。
 
 ---
