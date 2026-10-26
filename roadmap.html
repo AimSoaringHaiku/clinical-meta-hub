@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><title>開発ロードマップ</title><style>
+:root{--bg:#f7f8fa;--card:#fff;--fg:#1c2330;--muted:#5d6878;--line:#dde2ea;--acc:#0b6e8a;--acc-bg:#e3f2f6;--code:#f1f3f6;--crit:#c0392b;--bar:#2f7fb0}
+@media (prefers-color-scheme:dark){:root{--bg:#12161c;--card:#1a2029;--fg:#e3e8ef;--muted:#9aa6b6;--line:#2c3542;--acc:#5cc2dd;--acc-bg:#16323b;--code:#222a35;--crit:#ff7a6b;--bar:#4f9fd0}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.7 "Hiragino Sans","Noto Sans JP","Yu Gothic",system-ui,sans-serif}
+header{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.wrap{max-width:1000px;margin:0 auto;padding:0 16px}
+.top{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:10px 0 6px}
+.top h1{font-size:17px;margin:0;flex:1 1 auto}
+.top a.nav{color:var(--acc);text-decoration:none;font-size:13px;border:1px solid var(--line);border-radius:6px;padding:3px 10px}
+#q{flex:1 1 260px;font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg)}
+.tabs{display:flex;gap:4px;overflow-x:auto;padding-bottom:0}
+.tabs button{font:inherit;font-size:14px;background:none;border:none;border-bottom:3px solid transparent;color:var(--muted);padding:8px 12px;cursor:pointer;white-space:nowrap}
+.tabs button[aria-selected=true]{color:var(--acc);border-bottom-color:var(--acc);font-weight:600}
+.tabs .n{display:none;margin-left:6px;font-size:11px;background:var(--acc-bg);color:var(--acc);border-radius:10px;padding:0 7px}
+.searching .tabs .n{display:inline}
+main{padding-block:18px 60px}
+.panel[hidden]{display:none}
+.sec{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 18px 14px;margin:0 0 16px}
+.sec[hidden]{display:none}
+h2{font-size:19px;margin:14px 0 8px;border-left:4px solid var(--acc);padding-left:10px}
+h2.doc-title{font-size:22px}
+h3{font-size:16.5px;margin:20px 0 6px}h4{font-size:15px;margin:16px 0 4px;color:var(--muted)}
+p{margin:8px 0}ul,ol{margin:4px 0;padding-left:1.4em}li{margin:2px 0}
+li.task{list-style:none;margin-left:-1.2em}li.task input{margin-right:6px}
+li.task:has(input:checked)>label span{color:var(--muted);text-decoration:line-through}
+a{color:var(--acc)}hr{border:none;border-top:1px dashed var(--line);margin:14px 0}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.9em;word-break:break-all}
+.code{position:relative;background:var(--code);border-radius:8px;margin:8px 0;overflow-x:auto}
+.code pre{margin:0;padding:10px 12px;font:12.5px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap;word-break:break-all}
+.code .lang{position:absolute;right:8px;top:2px;font-size:10px;color:var(--muted)}
+a.url{word-break:break-all}
+.tbl{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left;min-width:90px}
+th{background:var(--acc-bg)}
+.badge{font-size:12px;background:var(--acc-bg);color:var(--acc);border-radius:6px;padding:3px 10px}
+.empty{color:var(--muted);padding:30px;text-align:center}
+footer{color:var(--muted);font-size:12px;text-align:center;padding:20px 16px 40px}
+.notice{background:var(--acc-bg);border-radius:8px;padding:8px 12px;font-size:13px;margin:12px 0}
+.progress{height:8px;background:var(--line);border-radius:4px;overflow:hidden;margin:6px 0}.progress i{display:block;height:100%;background:var(--acc);width:0}
+/* gantt */
+.gantt{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;overflow-x:auto}
+.gantt>div{min-width:640px}.g-title{font-weight:700;margin-bottom:6px}
+.g-row,.g-axis{display:flex;align-items:center;margin:3px 0}
+.g-name{flex:0 0 250px;font-size:12.5px;padding-right:8px}
+.g-track{position:relative;flex:1;height:22px;background:linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/calc(100%/12) 100%}
+.g-axis .g-track{height:18px;background:none}.tick{position:absolute;font-size:10.5px;color:var(--muted);transform:translateX(-50%)}
+.g-sec{font-weight:700;font-size:12.5px;margin-top:8px;color:var(--acc)}
+.g-bar{position:absolute;top:2px;height:18px;background:var(--bar);border-radius:4px;color:#fff;font-size:10.5px;line-height:18px;overflow:hidden;white-space:nowrap}
+.g-bar span{padding-left:5px}.g-bar.crit{background:var(--crit)}
+.g-legend{font-size:11.5px;color:var(--muted);margin-top:8px}.sw{display:inline-block;width:12px;height:12px;background:var(--bar);border-radius:3px;margin:0 4px 0 12px;vertical-align:middle}.sw.crit{background:var(--crit);margin-left:0}
+details{margin:8px 0}summary{cursor:pointer;color:var(--acc);font-size:13px}
+@media (max-width:640px){.g-name{flex-basis:130px}.sec{padding:4px 12px 12px}}
+</style></head><body><header><div class="wrap"><div class="top"><h1>🗺️ 開発ロードマップ</h1><a class="nav" href="index.html">📚 ナレッジ一覧へ</a><span class="badge" title="wishlist.md の達成率">✅ 達成率 52%（13/25）</span></div></div></header><main class="wrap"><div class="notice">TODOのチェック状態はこのブラウザ内（localStorage）にのみ保存されます。進捗：<strong id="pcount"></strong><div class="progress"><i id="pbar"></i></div></div><section class="sec"><h2 class="doc-title">🗺️ 開発ロードマップ（優先課題・TODO・工程表）</h2><ul><li><strong>記載日</strong>：2026-10-26 / <strong>最終更新日</strong>：2026-10-26</li><li><strong>位置づけ</strong>：本ポータルの今後の整備対象を、安全性インパクト順に並べた管理ページ。HTML版は <a href="roadmap.html">docs/roadmap.html</a>。</li><li><strong>共通ルール（全課題に適用）</strong>：<ol><li>数値・換算値・条件は<strong>必ず1次資料（添付文書・IF・ガイドライン・通知）で裏取りしてから</strong>掲載する。裏取り前は <code>🔍未検証</code> を明記し、「検証の狙い目」を併記する（<a href="index.html#t-readme">README.md</a> の鉄則と同じ）。</li><li><strong>安全管理系（課題2・3・5）は薬剤師のダブルチェック完了までドラフト扱い</strong>とし、現場で単独判断に使わない旨を冒頭に掲示する。</li><li>公開リポジトリへは出典のURLと自分の言葉の要約のみ掲載し、文献PDF・本文の転載はしない（<a href="index.html#t-1026">KNOWLEDGE_EXPANSION_1026.md</a> §5 参照）。</li></ol></li></ul><hr></section><section class="sec"><h2>1. 優先課題リスト</h2><div class="tbl"><table><thead><tr><th>#</th><th>課題</th><th>優先度</th><th>期間（目安）</th><th>成果物（案）</th></tr></thead><tbody><tr><td>2</td><td><strong>薬剤間換算値マスタ</strong>（安全管理・最優先）</td><td>🏆 最優先</td><td>10/27〜1/4</td><td><code>conversion_master.md</code>（表）＋出典・検証ステータス列</td></tr><tr><td>1</td><td><strong>個人情報取得の目的明記</strong></td><td>🥈 高</td><td>10/27〜11/16</td><td><code>privacy_purpose_matrix.md</code></td></tr><tr><td>3</td><td><strong>調剤・監査フローの標準化</strong></td><td>🥈 高</td><td>11/17〜1/18</td><td><code>dispensing_audit_flow.md</code>（Mermaid分岐図含む）</td></tr><tr><td>4</td><td><strong>保湿剤の銘柄変更早見表</strong></td><td>🥉 中</td><td>11/24〜12/7</td><td><code>moisturizer_substitution.md</code></td></tr><tr><td>5</td><td><strong>保管安定性と逸脱許容範囲</strong></td><td>🥉 中</td><td>12/8〜1/4</td><td><code>storage_stability.md</code></td></tr></tbody></table></div><p>※ 番号は依頼時のリスト番号。実施順は優先度とリソース配分に合わせて上表の並びに変更している。</p><hr></section><section class="sec"><h2>2. ガントチャート（Mermaid）</h2><div class="gantt"><div class="g-title">臨床ナレッジポータル 開発ロードマップ</div><div class="g-axis"><div class="g-name"></div><div class="g-track"><span class="tick" style="left:15.48%">11/9</span><span class="tick" style="left:32.14%">11/23</span><span class="tick" style="left:48.81%">12/7</span><span class="tick" style="left:65.48%">12/21</span><span class="tick" style="left:82.14%">1/4</span><span class="tick" style="left:98.81%">1/18</span></div></div><div class="g-sec">2. 換算値マスタ（最優先）</div><div class="g-row"><div class="g-name">スキーマ設計・出典ルール確定</div><div class="g-track"><div class="g-bar crit" style="left:0.00%;width:8.33%" title="10/27〜11/02"><span>10/27〜11/02</span></div></div></div><div class="g-row"><div class="g-name">ステロイド・BZD・オピオイド</div><div class="g-track"><div class="g-bar crit" style="left:8.33%;width:16.67%" title="11/03〜11/16"><span>11/03〜11/16</span></div></div></div><div class="g-row"><div class="g-name">降圧薬・スタチン・β遮断薬</div><div class="g-track"><div class="g-bar crit" style="left:25.00%;width:16.67%" title="11/17〜11/30"><span>11/17〜11/30</span></div></div></div><div class="g-row"><div class="g-name">レボドパ・DOAC・ループ利尿薬</div><div class="g-track"><div class="g-bar crit" style="left:41.67%;width:16.67%" title="12/01〜12/14"><span>12/01〜12/14</span></div></div></div><div class="g-row"><div class="g-name">カルシウム濃度・OTC含む許容量</div><div class="g-track"><div class="g-bar crit" style="left:58.33%;width:16.67%" title="12/15〜12/28"><span>12/15〜12/28</span></div></div></div><div class="g-row"><div class="g-name">薬剤師ダブルチェック・公開判定</div><div class="g-track"><div class="g-bar crit" style="left:75.00%;width:8.33%" title="12/29〜01/04"><span>12/29〜01/04</span></div></div></div><div class="g-sec">1. 個人情報取得の目的</div><div class="g-row"><div class="g-name">取得場面の棚卸し</div><div class="g-track"><div class="g-bar" style="left:0.00%;width:8.33%" title="10/27〜11/02"><span>10/27〜11/02</span></div></div></div><div class="g-row"><div class="g-name">臨床的理由・法的根拠の整理</div><div class="g-track"><div class="g-bar" style="left:8.33%;width:11.90%" title="11/03〜11/12"><span>11/03〜11/12</span></div></div></div><div class="g-row"><div class="g-name">薬剤師レビュー・表の確定</div><div class="g-track"><div class="g-bar" style="left:20.24%;width:4.76%" title="11/13〜11/16"><span>11/13〜11/16</span></div></div></div><div class="g-sec">3. 調剤・監査フロー</div><div class="g-row"><div class="g-name">一包化・粉砕可否の確認フロー</div><div class="g-track"><div class="g-bar" style="left:25.00%;width:25.00%" title="11/17〜12/07"><span>11/17〜12/07</span></div></div></div><div class="g-row"><div class="g-name">小児用量（添付文書と実臨床の併記）</div><div class="g-track"><div class="g-bar" style="left:50.00%;width:25.00%" title="12/08〜12/28"><span>12/08〜12/28</span></div></div></div><div class="g-row"><div class="g-name">各種加算条件・高齢者負担割合の分岐図</div><div class="g-track"><div class="g-bar" style="left:75.00%;width:25.00%" title="12/29〜01/18"><span>12/29〜01/18</span></div></div></div><div class="g-sec">4. 保湿剤銘柄変更</div><div class="g-row"><div class="g-name">一般名処方からの変更可能製剤まとめ</div><div class="g-track"><div class="g-bar" style="left:33.33%;width:16.67%" title="11/24〜12/07"><span>11/24〜12/07</span></div></div></div><div class="g-sec">5. 保管安定性</div><div class="g-row"><div class="g-name">設定理由・逸脱許容範囲の調査</div><div class="g-track"><div class="g-bar" style="left:50.00%;width:33.33%" title="12/08〜01/04"><span>12/08〜01/04</span></div></div></div><div class="g-legend"><span class="sw crit"></span>最優先（安全管理）<span class="sw"></span>通常</div></div><details><summary>Mermaidソース（GitHubのROADMAP.mdではこの図が描画されます）</summary><div class="code"><pre>gantt
+    title 臨床ナレッジポータル 開発ロードマップ
+    dateFormat YYYY-MM-DD
+    axisFormat %m/%d
+    section 2. 換算値マスタ（最優先）
+    スキーマ設計・出典ルール確定           :crit, c1, 2026-10-27, 7d
+    ステロイド・BZD・オピオイド            :crit, c2, 2026-11-03, 14d
+    降圧薬・スタチン・β遮断薬              :crit, c3, 2026-11-17, 14d
+    レボドパ・DOAC・ループ利尿薬           :crit, c4, 2026-12-01, 14d
+    カルシウム濃度・OTC含む許容量          :crit, c5, 2026-12-15, 14d
+    薬剤師ダブルチェック・公開判定         :crit, c6, 2026-12-29, 7d
+    section 1. 個人情報取得の目的
+    取得場面の棚卸し                       :p1, 2026-10-27, 7d
+    臨床的理由・法的根拠の整理             :p2, 2026-11-03, 10d
+    薬剤師レビュー・表の確定               :p3, 2026-11-13, 4d
+    section 3. 調剤・監査フロー
+    一包化・粉砕可否の確認フロー           :d1, 2026-11-17, 21d
+    小児用量（添付文書と実臨床の併記）     :d2, 2026-12-08, 21d
+    各種加算条件・高齢者負担割合の分岐図   :d3, 2026-12-29, 21d
+    section 4. 保湿剤銘柄変更
+    一般名処方からの変更可能製剤まとめ     :m1, 2026-11-24, 14d
+    section 5. 保管安定性
+    設定理由・逸脱許容範囲の調査           :s1, 2026-12-08, 28d</pre></div></details><hr></section><section class="sec"><h2>3. TODOリスト</h2><h3>🏆 課題2：薬剤間換算値マスタ（安全管理・最優先）</h3><ul><li class="task"><label><input type="checkbox" data-k="c1"> <span>表のスキーマ決定（基準薬、換算比、換算の方向、適用条件、<strong>換算が成立しない/注意すべき場面</strong>、出典URL、検証ステータス、検証日）</span></label></li><li class="task"><label><input type="checkbox" data-k="c2"> <span>出典ルールの確定（添付文書・IF・各学会GL・成書のどれを一次とするか／複数出典で値が割れる場合の扱い）</span></label></li><li class="task"><label><input type="checkbox" data-k="c3"> <span>ステロイド（プレドニゾロン換算の力価・糖質/鉱質作用の別）</span></label></li><li class="task"><label><input type="checkbox" data-k="c4"> <span>BZD（ジアゼパム換算等。半減期・代謝物の考慮、切替時の漸減注意）</span></label></li><li class="task"><label><input type="checkbox" data-k="c5"> <span>オピオイド（経口モルヒネ換算。不完全交差耐性・減量の目安を併記）</span></label></li><li class="task"><label><input type="checkbox" data-k="c6"> <span>降圧薬（同効薬の用量対応・最大用量）</span></label></li><li class="task"><label><input type="checkbox" data-k="c7"> <span>スタチン（強度分類・同等用量）</span></label></li><li class="task"><label><input type="checkbox" data-k="c8"> <span>β遮断薬（カルベジロール／ビソプロロール等の切替時の用量対応）</span></label></li><li class="task"><label><input type="checkbox" data-k="c9"> <span>レボドパ（LEDD：L-dopa Equivalent Daily Dose）</span></label></li><li class="task"><label><input type="checkbox" data-k="c10"> <span>DOAC（適応別・腎機能別・減量基準）</span></label></li><li class="task"><label><input type="checkbox" data-k="c11"> <span>ループ利尿薬（フロセミド換算）</span></label></li><li class="task"><label><input type="checkbox" data-k="c12"> <span><strong>カルシウム濃度</strong>（補正Ca、製剤中Ca量、活性型VD併用時の上限）</span></label></li><li class="task"><label><input type="checkbox" data-k="c13"> <span><strong>OTC含めた許容量</strong>（成分重複：解熱鎮痛薬・総合感冒薬・制酸薬/Ca・Mg含有製剤など）</span></label></li><li class="task"><label><input type="checkbox" data-k="c14"> <span>換算できない/すべきでない組合せの明記（「換算表があるから切替可」と誤読されない注意書き）</span></label></li><li class="task"><label><input type="checkbox" data-k="c15"> <span>薬剤師ダブルチェック（2名・別日）→ 公開可否判定</span></label></li></ul><h3>🥈 課題1：個人情報取得の目的明記</h3><ul><li class="task"><label><input type="checkbox" data-k="c16"> <span>薬局で取得する患者情報の棚卸し（氏名・保険情報・既往歴・副作用歴・併用薬・妊娠授乳・検査値・生活背景・お薬手帳・マイナ保険証 等）</span></label></li><li class="task"><label><input type="checkbox" data-k="c17"> <span>項目ごとに「臨床的理由」を記述（何を判断するために必要か）</span></label></li><li class="task"><label><input type="checkbox" data-k="c18"> <span>項目ごとに「法的理由・根拠」を調査（関連候補：個人情報保護法の利用目的特定・要配慮個人情報、薬剤師法の薬歴・情報提供、療養担当規則 ほか。<strong>条文番号は原文で確認</strong>）</span></label></li><li class="task"><label><input type="checkbox" data-k="c19"> <span>取得を断られた場合の対応（代替手段・記録の残し方）</span></label></li><li class="task"><label><input type="checkbox" data-k="c20"> <span>患者向け掲示/説明用の平易な文面案（キラーフレーズ）</span></label></li><li class="task"><label><input type="checkbox" data-k="c21"> <span>薬局の実運用（同意書・掲示物）との整合確認</span></label></li></ul><h3>🥈 課題3：調剤・監査フローの標準化</h3><ul><li class="task"><label><input type="checkbox" data-k="c22"> <span><strong>一包化・粉砕可否</strong>：添付文書（剤形・取扱い上の注意）→IF（粉砕後・分包後安定性）→メーカー問合せ、の確認フローを図示</span></label></li><li class="task"><label><input type="checkbox" data-k="c23"> <span>粉砕・一包化「不可」の典型類型（徐放性、腸溶性、光/湿気不安定、細胞毒性 等）の一覧</span></label></li><li class="task"><label><input type="checkbox" data-k="c24"> <span><strong>小児用量</strong>：添付文書の記載と実臨床で用いられる用量を併記する表の様式（出典・年齢/体重条件・上限）</span></label></li><li class="task"><label><input type="checkbox" data-k="c25"> <span><strong>各種加算条件</strong>：対象加算の洗い出し→算定要件を通知・疑義解釈で確認（改定年度を明記）</span></label></li><li class="task"><label><input type="checkbox" data-k="c26"> <span><strong>高齢者負担割合の分岐図</strong>（年齢・所得区分による1〜3割。制度改定の施行日を明記）</span></label></li><li class="task"><label><input type="checkbox" data-k="c27"> <span>監査時チェックリストへの統合（Mermaidフローチャート化）</span></label></li></ul><h3>🥉 課題4：保湿剤の銘柄変更早見表</h3><ul><li class="task"><label><input type="checkbox" data-k="c28"> <span>一般名処方（ヘパリン類似物質等）の対象製剤・剤形（クリーム/ローション/泡/スプレー）の洗い出し</span></label></li><li class="task"><label><input type="checkbox" data-k="c29"> <span>剤形間の変更可否と注意点（基剤・使用感・塗布範囲）</span></label></li><li class="task"><label><input type="checkbox" data-k="c30"> <span>先発/後発の規格・包装・薬価の差（改定時点を明記）</span></label></li><li class="task"><label><input type="checkbox" data-k="c31"> <span>患者への説明例（使用感が変わる場合のキラーフレーズ）</span></label></li></ul><h3>🥉 課題5：保管安定性と逸脱許容範囲</h3><ul><li class="task"><label><input type="checkbox" data-k="c32"> <span>保管条件の設定理由の整理（光・温度・湿度・容器、承認時の安定性試験条件）</span></label></li><li class="task"><label><input type="checkbox" data-k="c33"> <span>室温放置時などの<strong>逸脱可能範囲</strong>（温度・時間）をメーカーIF/問合せ回答で確認</span></label></li><li class="task"><label><input type="checkbox" data-k="c34"> <span>冷所保管品（インスリン・点眼・坐剤・生物学的製剤 等）の優先順位付け</span></label></li><li class="task"><label><input type="checkbox" data-k="c35"> <span>「逸脱＝即廃棄」とせず、メーカー見解・判断基準の根拠を併記する様式</span></label></li><li class="task"><label><input type="checkbox" data-k="c36"> <span>患者向け一言ガイド（猛暑日の持ち運び、車内放置 等）</span></label></li></ul><hr></section><section class="sec"><h2>4. マイルストーン</h2><div class="tbl"><table><thead><tr><th>日付</th><th>マイルストーン</th></tr></thead><tbody><tr><td>2026-11-16</td><td>課題1 初版（個人情報取得の目的マトリクス）</td></tr><tr><td>2026-12-07</td><td>課題4 初版／課題2 前半（ステロイド〜β遮断薬）ドラフト</td></tr><tr><td>2027-01-04</td><td>課題2 換算値マスタ v1（ダブルチェック済のみ公開）／課題5 初版</td></tr><tr><td>2027-01-18</td><td>課題3 初版（監査フロー統合）</td></tr></tbody></table></div></section></main><footer>静的HTML（外部通信なし）</footer><script>
+(function(){
+  var boxes=[].slice.call(document.querySelectorAll('input[type=checkbox][data-k]'));
+  var store={};try{store=JSON.parse(localStorage.getItem('roadmap-checks')||'{}');}catch(e){}
+  boxes.forEach(function(b){if(store[b.dataset.k]!==undefined)b.checked=!!store[b.dataset.k];
+    b.addEventListener('change',function(){store[b.dataset.k]=b.checked;try{localStorage.setItem('roadmap-checks',JSON.stringify(store));}catch(e){}update();});});
+  function update(){var d=boxes.filter(function(b){return b.checked;}).length;
+    document.getElementById('pcount').textContent=d+' / '+boxes.length;
+    document.getElementById('pbar').style.width=(boxes.length?d/boxes.length*100:0)+'%';}
+  update();
+})();
+</script></body></html>

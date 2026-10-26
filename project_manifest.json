@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "_comment": "公開用。各リポジトリの概要・進捗・公開URLのみ。非公開リポジトリはdigestと進捗だけを載せる。digestは120字以内。",
+  "updated_at": "2026-10-26",
+  "meta_repo": {
+    "name": "clinical-meta-hub",
+    "public_url": "https://aimsoaringhaiku.github.io/clinical-meta-hub/"
+  },
+  "repos": [
+    {
+      "id": "clinical-knowledge-portal",
+      "visibility": "private",
+      "role": "臨床ナレッジの一次整理",
+      "digest": "臨床注意ティア表・建前×本音ギャップ事例・PMDA/病院DI/吸入/検査等のリンク集を整理し、本ハブの公開ページを生成している。",
+      "status": "active",
+      "progress": { "percent": 30, "phase": "ロードマップ策定済・換算値マスタ着手前" },
+      "last_updated": "2026-10-26",
+      "public_url": "https://aimsoaringhaiku.github.io/clinical-meta-hub/"
+    },
+    {
+      "id": "pharma-gatekeeper",
+      "visibility": "unknown",
+      "role": "指定乱用防止医薬品 該当有無の判定早見表",
+      "digest": "判定早見表のPDF配布とWeb閲覧サイト。Web版の最終更新は7/28。",
+      "status": "active",
+      "last_updated": "2026-07-28",
+      "public_url": "https://aimsoaringhaiku.github.io/pharma-gatekeeper/"
+    },
+    {
+      "id": "Pharmacy-Compliance-Signage-Checklist",
+      "visibility": "unknown",
+      "role": "薬局掲示物のコンプライアンス・チェックリスト",
+      "digest": "薬局の掲示物が要件を満たしているか確認する閲覧用チェックリスト。",
+      "status": "active",
+      "public_url": "https://aimsoaringhaiku.github.io/Pharmacy-Compliance-Signage-Checklist/"
+    },
+    {
+      "id": "integrated-master-hub",
+      "visibility": "unknown",
+      "role": "個別疾患・薬剤アプリの格納庫",
+      "digest": "エンレスト等の個別疾患・薬剤アプリ（対象患者層分析・服薬指導文言集の試作）を格納。",
+      "status": "active",
+      "public_url": "https://aimsoaringhaiku.github.io/integrated-master-hub/docs/apps/Entresto.html"
+    }
+  ]
+}
