@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><title>鉄剤とお茶（詳細）</title><style>
+:root{--bg:#fff;--fg:#222;--mut:#777;--line:#d5d9df;--acc:#1a5f7a;--code:#f3f4f6;--hover:#f1f4f7;--open:#d6e6f5;--faint:#a3acb8;--c1:#1a5fb4;--c2:#1e7a46;--c3:#a66200;--c4:#6f42c1}
+@media (prefers-color-scheme:dark){:root{--bg:#15181d;--fg:#dde1e6;--mut:#8b94a0;--line:#2e343c;--acc:#6ab7d0;--code:#1f242b;--hover:#1b222a;--open:#243a50;--faint:#5f6b78;--c1:#6aa6f0;--c2:#5fc088;--c3:#e0a84a;--c4:#b18cf0}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:12px/1.7 -apple-system,"Hiragino Sans","Noto Sans JP","Yu Gothic",system-ui,sans-serif}
+.w{max-width:1000px;margin:0 auto;padding:12px 16px 40px}
+h1{font-size:14px;margin:0 0 6px}
+.bar{display:flex;gap:12px;align-items:center;margin:0 0 10px;font-size:12px;color:var(--mut);flex-wrap:wrap}
+.bar input{flex:1 1 220px;min-width:0;font:inherit;padding:4px 8px;border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:3px}
+.pm{position:relative}.pm summary{cursor:pointer;color:var(--acc);text-decoration:underline;list-style:none}.pm summary::-webkit-details-marker{display:none}
+.pm div{position:absolute;z-index:5;top:1.6em;left:0;background:var(--bg);border:1px solid var(--line);border-radius:3px;padding:4px 10px;display:flex;flex-direction:column;gap:2px;white-space:nowrap}
+a[href^="detail_"]{display:inline-block;border:1px solid var(--acc);border-radius:3px;padding:0 8px;text-decoration:none;font-size:11.5px}
+.bar a,.bar button{font:inherit;color:var(--acc);cursor:pointer;text-decoration:underline;background:none;border:none;padding:0}
+details{margin:0}
+summary{cursor:pointer;padding:2px 0;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";display:inline-block;width:14px;color:var(--mut);font-family:ui-monospace,Menlo,monospace}
+details[open]>summary::before{content:"\2212"}
+.l{font-weight:600}
+.nd.t0>summary .l{font-size:13px}
+.d{color:var(--mut);margin-left:10px;font-weight:400}
+.nb{margin-left:9px;padding-left:12px;border-left:1px solid var(--line)}
+.nb>p,.nb>ul,.nb>ol,.nb>.tbl,.nb>.code,.nb>h4,.nb>.flow{margin-left:6px}
+.nb p{margin:4px 0}.nb ul,.nb ol{margin:3px 0;padding-left:1.5em}.nb ul{list-style:disc}.nb ul ul{list-style:circle}.nb ul ul ul{list-style:square}.nb li{margin:2px 0;padding-left:.15em}.nb ul.lks{padding-left:0;list-style:none}
+.nb h4{font-size:12px;margin:8px 0 2px}
+.nb hr{display:none}
+p.old{color:var(--mut);font-size:11px}
+.bd{display:inline-block;font-size:10px;line-height:1.4;color:var(--mut);border:1px solid var(--line);border-radius:2px;padding:0 4px;margin:0 3px;font-weight:400;white-space:nowrap}
+.bd.b1{color:var(--c1);border-color:var(--c1)}.bd.b2{color:var(--c2);border-color:var(--c2)}.bd.b3{color:var(--c3);border-color:var(--c3)}.bd.bo{color:var(--c4);border-color:var(--c4)}
+.key{font-size:11px;color:var(--mut);margin:0 0 8px}
+details.nd>summary{border-left:4px solid transparent;padding-left:4px}
+details.nd>summary:hover{background:var(--hover)}
+details.nd[open]>summary{background:var(--open);border-left-color:var(--acc);font-weight:600}
+details.nd[open]>summary::before{color:var(--acc);font-weight:700}
+details.nd[open]>.nb{border-left:2px solid var(--acc)}
+details.nd:target>summary,details.nd.hit>summary{outline:2px solid var(--acc);outline-offset:1px}
+ul.lks{list-style:none;margin:1px 0;padding:0}
+li.lk{padding:2px 0 2px 14px}
+li.lk a{color:var(--fg);text-decoration:none;display:flex;gap:10px;align-items:baseline}
+li.lk .bw{flex:0 0 7.8em;min-width:0}
+li.lk .m{flex:1 1 auto;min-width:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+li.lk .t{font-weight:500}
+li.lk.k1 .t{font-style:italic}
+li.lk a:hover .t{color:var(--acc);text-decoration:underline}
+li.lk .d{margin-left:8px;color:var(--mut)}
+li.lk .u{flex:0 0 17em;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--faint);font:9.5px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace}
+.up{display:none}
+.mono,a.url,code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.mono{font-size:.95em}
+.lgroup{margin:3px 0 3px 6px}.lg-h{font-weight:600;padding-left:14px}.lg-d{color:var(--mut);padding-left:14px}
+.lgroup>ul.lks{margin-left:12px}
+a{color:var(--acc)}
+code{background:var(--code);padding:0 3px;border-radius:2px;font-size:11px;word-break:break-all}
+.code{background:var(--code);border-radius:3px;margin:4px 0;overflow-x:auto}.code pre{margin:0;padding:6px 8px;font:11px/1.5 ui-monospace,Menlo,monospace;white-space:pre-wrap;word-break:break-all}
+.code .lang{display:none}
+.tbl{overflow-x:auto;margin:4px 0}
+table{border-collapse:collapse;width:100%;font-size:11.5px}
+th,td{border:1px solid var(--line);padding:3px 6px;vertical-align:top;text-align:left}
+th{background:var(--code);font-weight:600}
+.about>summary,.about>summary .l{font-weight:400;color:var(--mut)}
+.empty{color:var(--mut);padding:16px 0}
+footer{color:var(--mut);font-size:10.5px;margin-top:24px;line-height:1.6}
+.flow{margin:6px 0;overflow-x:auto}
+.f-box{display:inline-block;max-width:34em;border:1px solid var(--fg);background:var(--bg);border-radius:3px;padding:2px 8px;font-size:11.5px;line-height:1.5}
+.f-box.f-q{border-style:dashed;font-weight:600}
+.f-box.ok,.f-box.info{border-width:2px}.f-box.ng{color:var(--mut);border-color:var(--mut)}
+.f-kids{list-style:none;margin:1px 0 2px 14px;padding:0 0 0 14px;border-left:1px solid var(--line)}
+.f-kids>li{margin:3px 0}
+.f-edge{display:inline-block;font-size:10.5px;color:var(--mut);border:1px solid var(--line);border-radius:2px;padding:0 6px;margin:0 6px 2px 0}
+.nb .gantt,.nb details>summary.small{font-size:11px}
+@media (max-width:640px){body{font-size:12px}li.lk{padding:3px 0 3px 14px}li.lk a{flex-wrap:wrap}li.lk .bw{flex-basis:7em}li.lk .m{flex-basis:calc(100% - 8em)}li.lk .u{flex:1 0 100%;text-align:left;padding-left:8em}}
+@media all{
+  @page{size:A4;margin:12mm}
+  :root{--bg:#fff;--fg:#000;--mut:#333;--line:#999;--acc:#000;--code:#fff}
+  body{background:#fff;color:#000;font-size:9.5pt;line-height:1.45}
+  .w{max-width:none;padding:0}
+  .bar,.empty{display:none !important}
+  a,li.lk a{color:#000;text-decoration:none}
+  li.lk{break-inside:avoid;padding-left:12px}
+  li.lk a{display:block}
+  li.lk .bw{display:inline-block;margin-right:6px}
+  li.lk .m{display:inline;overflow:visible}
+  li.lk.k1 .t{font-style:italic}
+  details.nd>summary{border-left:none}
+  details.nd[open]>.nb{border-left:1px solid #999}
+  .up{display:inline}
+  li.lk .u,li.lk .d,.d{white-space:normal;overflow-wrap:anywhere}
+  li.lk .u{display:block;text-align:left;margin-left:0;font-size:7.5pt;color:#333;overflow:visible;white-space:normal;overflow-wrap:anywhere}
+  .d{display:inline}
+  summary{break-after:avoid}
+  summary::before{display:none}
+  table,.tbl,.code,.flow,.f-box,.lgroup,li.lk,tr{break-inside:avoid}
+  .nd.t0{break-before:page}.nd.t0:first-of-type{break-before:auto}
+  .bd,.bd.b1,.bd.b2,.bd.b3,.bd.bo{color:#000;border-color:#000}
+  .key{color:#000}
+  details.nd[open]>summary{background:none}
+  .code,th{background:#fff}.code pre{white-space:pre-wrap}
+  footer{color:#000}
+  .tbl{overflow:visible}
+}
+.pbar{display:flex;gap:14px;align-items:center;margin:0 0 10px}.pbar button{font:inherit;cursor:pointer}.xr{margin-left:10px;font-size:10.5px;white-space:nowrap}.xr a{color:var(--acc)}@media print{.pbar{display:none !important}}.w{padding:12px 18px}.lead{color:var(--mut);font-size:12px;margin:0 0 8px}</style></head><body><div class="w"><div class="pbar"><button type="button" onclick="window.print()">印刷ダイアログを開く</button><a href="index.html#s2-3">サイトの該当項目へ戻る</a><a href="index.html">サイトのトップ</a></div><h1>鉄剤とお茶（詳細）</h1><div id="tree"><div class="lead"><p>2-3 Case 02 の詳細記述です。サイトの2-3には要約だけを置き、本文はここにまとめています。</p></div><details open class="nd t1" id="d-1" open><summary><span class="l">概要（記載日・ティア・検証ステータス）</span><span class="d" title=""></span></summary><div class="nb"><ul><li><strong>記載日</strong>：<span class="mono">2026-10-20</span> / <strong>更新日</strong>：<span class="mono">2026-10-20</span></li><li><strong>臨床注意ティア</strong>： <span class="bd t3">Tier 3</span>相当（アドヒアランス最優先・柔軟許容）</li><li><strong>検証ステータス</strong>： 要再検討（<span class="mono">2026-10-26</span>：フェロミア・フェロ・グラデュメットの添付文書を原文で確認したところ、<strong>両剤とも「タンニン酸を含有する食品」の併用注意の記載がある</strong>。台帳 <span class="mono">V-07</span>。クエン酸第一鉄ナトリウムについては、鉄の吸収指標で「緑茶による抑制なし」とする研究2件（台帳 <span class="mono">V-10</span>・<span class="mono">V-11</span>）に加え、<strong>貧血妊婦でヘモグロビン値にも差がなかったとする1989年の報告</strong>を抄録で確認（台帳 <span class="mono">V-13</span>）。硫酸鉄での比較と、V-13の本文（症例数など）は未確認）</li></ul></div></details><details open class="nd t1" id="d-2" open><summary><span class="l">① 現場の結論（判断の基準）</span><span class="d" title=""></span></summary><div class="nb"><ul><li><strong>「多少お茶で飲んでも治療効果に致命的な影響はないため、厳しく禁じる必要はない」</strong></li><li><strong>医師の思考</strong>：お茶を避けるために飲むタイミングを逃し、服薬コンプライアンスが落ちることの方が貧血治療において圧倒的に不利益である。</li></ul></div></details><details open class="nd t1" id="d-3" open><summary><span class="l">② 「建前」と「本音」のギャップ構造</span><span class="d" title=""></span></summary><div class="nb"><div class="tbl"><table><thead><tr><th>視点</th><th>内容・記載</th><th>ギャップが生じる構造的理由</th></tr></thead><tbody><tr><td><strong> 1次資料（建前・免責）</strong><br>※添付文書（<span class="mono">2026-10-26</span> 原文確認）</td><td>・<strong>クエン酸第一鉄（フェロミア）</strong>：併用注意に「タンニン酸を含有する食品」があり、「in vitro試験において、タンニン酸と高分子鉄キレートを形成することが報告されている」と記載。<br>・<strong>硫酸鉄（フェロ・グラデュメット）</strong>：併用注意に「タンニン酸を含有する食品等」があり、「難溶性の複合体を形成する」と記載。</td><td>両剤とも添付文書にタンニン注意が載っている（フェロミアの記載は <em>in vitro</em> の報告にもとづくと明記）。当初の「フェロミアはお茶NGの記載が最初からない」は誤りだった。現場の運用（お茶で飲んでも大きな問題はないとする見方）との差は、添付文書の注意が <em>in vitro</em> データにもとづく点にあると考えられるが、その臨床上の根拠は未確認。</td></tr><tr><td><strong> 臨床知（本音・実態）</strong><br>※臨床試験・3次資料</td><td>クエン酸第一鉄ナトリウム（フェロミアの成分）を水と緑茶で服用して比べた研究が2件あり、<strong>鉄の吸収の指標（血清鉄など）で、緑茶による抑制は認められなかった</strong>（久保田ら 1990：老年者15例、日本老年医学会雑誌 27:555／小切間ら 2001：若年女性50名の無作為化比較、日本栄養・食糧学会誌 54:81。台帳 <span class="mono">V-10</span>・<span class="mono">V-11</span>。いずれも抄録で確認）。この2件の指標は血清鉄等で<strong>ヘモグロビン上昇ではなく</strong>、少数・短期。<strong>ヘモグロビンを指標にした報告</strong>として、貧血妊婦にフェロミアを緑茶または水で服用させた比較（三田村ら 1989、日本産科婦人科学会雑誌 41:688）があり、<strong>ヘモグロビン値・血清鉄・総鉄結合能は両群とも著明に改善し、群間に有意差なし</strong>（治癒率 緑茶群96.7%・水群93.4%、副作用出現率 緑茶群18.3%・水群21.9%）。台帳 <span class="mono">V-13</span>、<strong>抄録のみ確認で症例数は未確認</strong>。硫酸鉄での比較は未確認。</td><td>医療用鉄剤は鉄の配合量（100mg等）が圧倒的に多く、一部がタンニンと結合して吸収が落ちても、治療に必要な量は十分に吸収されるため。</td></tr></tbody></table></div></div></details><details open class="nd t1" id="d-4" open><summary><span class="l">③ 現場でのアクション（言い方の工夫）</span><span class="d" title=""></span></summary><div class="nb"><ul><li><strong>ダメな指導（1次資料の記載の機械的な当てはめ）</strong>：「添付文書に併用注意と書いてあるので、前後2時間は絶対にお茶やコーヒーを飲まないでください！」</li><li><strong>現場での説明例</strong>：「昔は鉄剤とお茶はダメと言われていましたが、今のお薬（特にフェロミアなど）はお茶の影響をほとんど受けません。お水がなくて飲み忘れるくらいなら、手元のお茶や麦茶でサッと飲んでしまって全然大丈夫ですよ！ただ、ものすごく濃い緑茶や玉露のときだけ、念のためお水にしてくださいね」</li><li><strong>使用保留の注記（<span class="mono">2026-10-26</span>）</strong>：上のフレーズの「今のお薬（特にフェロミアなど）はお茶の影響をほとんど受けません」は、添付文書（フェロミアにタンニン酸の併用注意あり）と食い違う。添付文書の注意は残っているため、この言い方のまま使わない。クエン酸第一鉄ナトリウムについては「お茶で飲んでも鉄の吸収が大きく下がらないという研究報告がある（少数・短期の研究）」の範囲なら根拠がある（台帳 <span class="mono">V-10</span>・<span class="mono">V-11</span>）。患者さんへの言い方はユーザー判断。「飲み忘れるくらいならお茶でもよい」という趣旨の部分は自作の判断として残す。</li></ul></div></details></div><footer>内容は参考情報であり、実務判断は必ず1次資料（添付文書・IF・ガイドライン）で裏取りしてください。</footer></div><script></script></body></html>

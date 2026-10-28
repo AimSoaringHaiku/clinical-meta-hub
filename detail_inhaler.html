@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><title>吸入ステロイドの用量（詳細）</title><style>
+:root{--bg:#fff;--fg:#222;--mut:#777;--line:#d5d9df;--acc:#1a5f7a;--code:#f3f4f6;--hover:#f1f4f7;--open:#d6e6f5;--faint:#a3acb8;--c1:#1a5fb4;--c2:#1e7a46;--c3:#a66200;--c4:#6f42c1}
+@media (prefers-color-scheme:dark){:root{--bg:#15181d;--fg:#dde1e6;--mut:#8b94a0;--line:#2e343c;--acc:#6ab7d0;--code:#1f242b;--hover:#1b222a;--open:#243a50;--faint:#5f6b78;--c1:#6aa6f0;--c2:#5fc088;--c3:#e0a84a;--c4:#b18cf0}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:12px/1.7 -apple-system,"Hiragino Sans","Noto Sans JP","Yu Gothic",system-ui,sans-serif}
+.w{max-width:1000px;margin:0 auto;padding:12px 16px 40px}
+h1{font-size:14px;margin:0 0 6px}
+.bar{display:flex;gap:12px;align-items:center;margin:0 0 10px;font-size:12px;color:var(--mut);flex-wrap:wrap}
+.bar input{flex:1 1 220px;min-width:0;font:inherit;padding:4px 8px;border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:3px}
+.pm{position:relative}.pm summary{cursor:pointer;color:var(--acc);text-decoration:underline;list-style:none}.pm summary::-webkit-details-marker{display:none}
+.pm div{position:absolute;z-index:5;top:1.6em;left:0;background:var(--bg);border:1px solid var(--line);border-radius:3px;padding:4px 10px;display:flex;flex-direction:column;gap:2px;white-space:nowrap}
+a[href^="detail_"]{display:inline-block;border:1px solid var(--acc);border-radius:3px;padding:0 8px;text-decoration:none;font-size:11.5px}
+.bar a,.bar button{font:inherit;color:var(--acc);cursor:pointer;text-decoration:underline;background:none;border:none;padding:0}
+details{margin:0}
+summary{cursor:pointer;padding:2px 0;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";display:inline-block;width:14px;color:var(--mut);font-family:ui-monospace,Menlo,monospace}
+details[open]>summary::before{content:"\2212"}
+.l{font-weight:600}
+.nd.t0>summary .l{font-size:13px}
+.d{color:var(--mut);margin-left:10px;font-weight:400}
+.nb{margin-left:9px;padding-left:12px;border-left:1px solid var(--line)}
+.nb>p,.nb>ul,.nb>ol,.nb>.tbl,.nb>.code,.nb>h4,.nb>.flow{margin-left:6px}
+.nb p{margin:4px 0}.nb ul,.nb ol{margin:3px 0;padding-left:1.5em}.nb ul{list-style:disc}.nb ul ul{list-style:circle}.nb ul ul ul{list-style:square}.nb li{margin:2px 0;padding-left:.15em}.nb ul.lks{padding-left:0;list-style:none}
+.nb h4{font-size:12px;margin:8px 0 2px}
+.nb hr{display:none}
+p.old{color:var(--mut);font-size:11px}
+.bd{display:inline-block;font-size:10px;line-height:1.4;color:var(--mut);border:1px solid var(--line);border-radius:2px;padding:0 4px;margin:0 3px;font-weight:400;white-space:nowrap}
+.bd.b1{color:var(--c1);border-color:var(--c1)}.bd.b2{color:var(--c2);border-color:var(--c2)}.bd.b3{color:var(--c3);border-color:var(--c3)}.bd.bo{color:var(--c4);border-color:var(--c4)}
+.key{font-size:11px;color:var(--mut);margin:0 0 8px}
+details.nd>summary{border-left:4px solid transparent;padding-left:4px}
+details.nd>summary:hover{background:var(--hover)}
+details.nd[open]>summary{background:var(--open);border-left-color:var(--acc);font-weight:600}
+details.nd[open]>summary::before{color:var(--acc);font-weight:700}
+details.nd[open]>.nb{border-left:2px solid var(--acc)}
+details.nd:target>summary,details.nd.hit>summary{outline:2px solid var(--acc);outline-offset:1px}
+ul.lks{list-style:none;margin:1px 0;padding:0}
+li.lk{padding:2px 0 2px 14px}
+li.lk a{color:var(--fg);text-decoration:none;display:flex;gap:10px;align-items:baseline}
+li.lk .bw{flex:0 0 7.8em;min-width:0}
+li.lk .m{flex:1 1 auto;min-width:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+li.lk .t{font-weight:500}
+li.lk.k1 .t{font-style:italic}
+li.lk a:hover .t{color:var(--acc);text-decoration:underline}
+li.lk .d{margin-left:8px;color:var(--mut)}
+li.lk .u{flex:0 0 17em;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--faint);font:9.5px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace}
+.up{display:none}
+.mono,a.url,code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.mono{font-size:.95em}
+.lgroup{margin:3px 0 3px 6px}.lg-h{font-weight:600;padding-left:14px}.lg-d{color:var(--mut);padding-left:14px}
+.lgroup>ul.lks{margin-left:12px}
+a{color:var(--acc)}
+code{background:var(--code);padding:0 3px;border-radius:2px;font-size:11px;word-break:break-all}
+.code{background:var(--code);border-radius:3px;margin:4px 0;overflow-x:auto}.code pre{margin:0;padding:6px 8px;font:11px/1.5 ui-monospace,Menlo,monospace;white-space:pre-wrap;word-break:break-all}
+.code .lang{display:none}
+.tbl{overflow-x:auto;margin:4px 0}
+table{border-collapse:collapse;width:100%;font-size:11.5px}
+th,td{border:1px solid var(--line);padding:3px 6px;vertical-align:top;text-align:left}
+th{background:var(--code);font-weight:600}
+.about>summary,.about>summary .l{font-weight:400;color:var(--mut)}
+.empty{color:var(--mut);padding:16px 0}
+footer{color:var(--mut);font-size:10.5px;margin-top:24px;line-height:1.6}
+.flow{margin:6px 0;overflow-x:auto}
+.f-box{display:inline-block;max-width:34em;border:1px solid var(--fg);background:var(--bg);border-radius:3px;padding:2px 8px;font-size:11.5px;line-height:1.5}
+.f-box.f-q{border-style:dashed;font-weight:600}
+.f-box.ok,.f-box.info{border-width:2px}.f-box.ng{color:var(--mut);border-color:var(--mut)}
+.f-kids{list-style:none;margin:1px 0 2px 14px;padding:0 0 0 14px;border-left:1px solid var(--line)}
+.f-kids>li{margin:3px 0}
+.f-edge{display:inline-block;font-size:10.5px;color:var(--mut);border:1px solid var(--line);border-radius:2px;padding:0 6px;margin:0 6px 2px 0}
+.nb .gantt,.nb details>summary.small{font-size:11px}
+@media (max-width:640px){body{font-size:12px}li.lk{padding:3px 0 3px 14px}li.lk a{flex-wrap:wrap}li.lk .bw{flex-basis:7em}li.lk .m{flex-basis:calc(100% - 8em)}li.lk .u{flex:1 0 100%;text-align:left;padding-left:8em}}
+@media all{
+  @page{size:A4;margin:12mm}
+  :root{--bg:#fff;--fg:#000;--mut:#333;--line:#999;--acc:#000;--code:#fff}
+  body{background:#fff;color:#000;font-size:9.5pt;line-height:1.45}
+  .w{max-width:none;padding:0}
+  .bar,.empty{display:none !important}
+  a,li.lk a{color:#000;text-decoration:none}
+  li.lk{break-inside:avoid;padding-left:12px}
+  li.lk a{display:block}
+  li.lk .bw{display:inline-block;margin-right:6px}
+  li.lk .m{display:inline;overflow:visible}
+  li.lk.k1 .t{font-style:italic}
+  details.nd>summary{border-left:none}
+  details.nd[open]>.nb{border-left:1px solid #999}
+  .up{display:inline}
+  li.lk .u,li.lk .d,.d{white-space:normal;overflow-wrap:anywhere}
+  li.lk .u{display:block;text-align:left;margin-left:0;font-size:7.5pt;color:#333;overflow:visible;white-space:normal;overflow-wrap:anywhere}
+  .d{display:inline}
+  summary{break-after:avoid}
+  summary::before{display:none}
+  table,.tbl,.code,.flow,.f-box,.lgroup,li.lk,tr{break-inside:avoid}
+  .nd.t0{break-before:page}.nd.t0:first-of-type{break-before:auto}
+  .bd,.bd.b1,.bd.b2,.bd.b3,.bd.bo{color:#000;border-color:#000}
+  .key{color:#000}
+  details.nd[open]>summary{background:none}
+  .code,th{background:#fff}.code pre{white-space:pre-wrap}
+  footer{color:#000}
+  .tbl{overflow:visible}
+}
+.pbar{display:flex;gap:14px;align-items:center;margin:0 0 10px}.pbar button{font:inherit;cursor:pointer}.xr{margin-left:10px;font-size:10.5px;white-space:nowrap}.xr a{color:var(--acc)}@media print{.pbar{display:none !important}}.w{padding:12px 18px}.lead{color:var(--mut);font-size:12px;margin:0 0 8px}</style></head><body><div class="w"><div class="pbar"><button type="button" onclick="window.print()">印刷ダイアログを開く</button><a href="index.html#s2-4">サイトの該当項目へ戻る</a><a href="index.html">サイトのトップ</a></div><h1>吸入ステロイドの用量（詳細）</h1><div id="tree"><div class="lead"><p>2-4「疾患による規格・使用制限の早見ルール」のうち、吸入ステロイドの詳細記述です。サイトの2-4には要約だけを置き、本文はここにまとめています。</p></div><details open class="nd t1" id="d-1" open><summary><span class="l">COPD vs 気管支喘息（吸入ステロイド用量の注意点）</span><span class="d" title=""></span></summary><div class="nb"><ul><li><strong>ルール</strong>：COPDには肺炎リスク回避のため高用量ステロイドを使用しない。</li><li><strong>逆引き判定</strong>：レルベアやテリルジー等はCOPD適応において高用量規格が除外されているため、「レルベア200」が出た時点で（COPDではなく）気管支喘息であると100%類推できる。</li><li><strong>確認（<span class="mono">2026-10-26</span>、台帳 <span class="mono">V-06</span>）</strong>：レルベアエリプタ・テリルジーエリプタの添付文書の効能欄で、<strong>COPDの効能は100エリプタのみ、200エリプタは気管支喘息のみ</strong>と確認した。したがって「200が出たら（添付文書の適応の範囲では）喘息」は成り立つ。ただし適応外使用の可能性は否定できないため、「100%」は言い過ぎ（目安として扱う）。</li><li><strong>確認（<span class="mono">2026-10-26</span>、台帳 <span class="mono">V-18</span>・<span class="mono">V-19</span>）</strong>：レルベアの添付文書8.6に「COPD患者を対象とした国際共同臨床試験及び海外臨床試験において、肺炎の発現が本剤の用量依存的に増加することが報告されている」とあり、「高用量でCOPDの肺炎が増える」点は一次資料にある。COPDの適応追加（2016年12月）はレルベア100のみで、申請資料（申請者GSK）には「COPDの第III相で3用量を比べ、100/25μgが妥当な用量と考えられた」とある。<strong>ただし「COPDに200を設けなかった理由は肺炎リスク」と明記した資料は確認できていない</strong>ので、「肺炎リスク回避のため」は自作の整理（有効性での用量選択と肺炎の用量依存的増加の両方が根拠）として扱う。ICSの過剰使用を避ける趣旨は総説（2次資料）でも確認した（台帳 <span class="mono">V-19</span>）。</li></ul></div></details></div><footer>内容は参考情報であり、実務判断は必ず1次資料（添付文書・IF・ガイドライン）で裏取りしてください。</footer></div><script></script></body></html>
