@@ -18,6 +18,9 @@
 | :--- | :--- |
 | `index.html` | ナレッジ一覧（タブ切替・検索）。単一ファイルの静的HTML |
 | `roadmap.html` | 開発ロードマップ（TODO・ガントチャート） |
+| `print_links.html` / `print_notes.html` / `print.html` | A4印刷用の画面（リンク集だけ／解説・事例だけ／全部）。トップの「印刷」メニューからも開ける |
+| `detail_iron_tea.html` / `detail_inhaler.html` / `detail_kidney_dose.html` | 詳細ページ（鉄剤とお茶／吸入ステロイドの用量／腎臓：薬の注意レベル案）。トップの「詳細ページ」メニューからも開ける |
+| `proposals/` | 検討資料（たたき台）のページとPDF。共有ログ（`proposals/share_log.html`）もここにある |
 | `exabase_knowledge_pack.md` | 全ナレッジを1ファイルに結合したもの（生成AI・RAGに投入する用。URLは1行の完全な形） |
 | `project_manifest.json` | 各リポジトリの概要・進捗・公開URLの軽量一覧（AI・人間共通の入口） |
 
