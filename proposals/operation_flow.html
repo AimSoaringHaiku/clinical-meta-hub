@@ -1,0 +1,40 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
+<title>運用の流れ（検索依頼の受付と実施）</title><style>
+:root{--bg:#fff;--fg:#222;--mut:#666;--line:#c9ced6;--acc:#1a5f7a;--hd:#f1f4f7}
+@media(prefers-color-scheme:dark){:root{--bg:#15181d;--fg:#dde1e6;--mut:#9aa3ae;--line:#38404a;--acc:#6ab7d0;--hd:#1f242b}}
+body{margin:0;background:var(--bg);color:var(--fg);font:13px/1.7 -apple-system,"Hiragino Sans","Noto Sans JP","Yu Gothic",sans-serif}
+.w{max-width:900px;margin:0 auto;padding:18px}h1{font-size:16px;margin:0 0 4px}h2{font-size:13px;margin:14px 0 4px}.note{color:var(--mut);font-size:12px;margin:2px 0 8px}
+table{border-collapse:collapse;width:100%}th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}th{background:var(--hd)}
+td:first-child{white-space:nowrap;text-align:center}ul{margin:4px 0;padding-left:18px}.st{font-size:11px;color:var(--mut);white-space:nowrap}
+a{color:var(--acc)}
+@media print{@page{size:A4;margin:9mm}.np{display:none}body{font-size:9.6px;line-height:1.55}.w{padding:0}h2{margin:8px 0 2px}th,td{padding:3px 6px}a{color:inherit;text-decoration:none}}
+</style></head><body><div class="w"><h1>運用の流れ：検索依頼の受付と実施</h1>
+<p class="note">2026/10/28。検討資料（たたき台）。このポータルは成果の公表の場ではなく、検索・調査の希望を受け付け、現場の状況を聞いて優先度をつけ、重複なく、一次資料の土台にもとづく知見を確保するための窓口です。<span class="np"><a href="index.html">検討資料の一覧へ戻る</a></span></p>
+<h2>検索希望を受けてからの流れ</h2>
+<table><thead><tr><th>段</th><th>やること</th><th>記録するもの</th><th>状態</th></tr></thead><tbody>
+<tr><td>1</td><td><b>受付</b>：検索希望（質問・背景・期限）を、受付箱またはチャットで受ける。優先度をつける。</td><td>受付箱、課題リスト</td><td class="st">運用中</td></tr>
+<tr><td>2</td><td><b>既存の確認</b>：回答カード・一次資料カード・確認台帳に、すでに答えや確認済みの資料がないかを見る。あれば再調査しない。</td><td>台帳の番号</td><td class="st">運用中</td></tr>
+<tr><td>3</td><td><b>先行まとめの確認</b>：医療系の4サイト（m3.com、日経メディカル Online、CareNet、Medical Tribune）で、すでにまとまった記事（先行まとめ）がないかを検索する。MedPeer は一部が医師限定のため除く。時事メディカル（行政の動き・公的な注意喚起）など、候補は他にもある。<b>十分と判断できれば、追加の検索はしない</b>（理由を記録する）。</td><td>検索ログ（検索語・日付・見たもの・採否）</td><td class="st">案（4サイトは選定済み。基準は未決）</td></tr>
+<tr><td>4</td><td><b>新規の探索</b>：先行まとめで足りない時だけ行う。実施前に依頼者の許可を得る。一次資料（添付文書・インタビューフォーム・ガイドライン・適正使用ガイド・公開されている病院のPDFなど）を優先する。</td><td>検索ログ、取得記録</td><td class="st">運用中（様式は案）</td></tr>
+<tr><td>5</td><td><b>確認</b>：資料の本文を開いて確認する。開けなかった資料は「未確認」とし、理由（接続できない等）を書く。数値は、原文で確認できるまで載せない。</td><td>一次資料カード（取得日・取得方法・取得者）、確認台帳</td><td class="st">運用中</td></tr>
+<tr><td>6</td><td><b>回答</b>：「導く一文」「参照した二次・三次資料」「一次資料の番号」の3列で残す。確認できない部分は、そう書く。</td><td>回答カード</td><td class="st">たたき台</td></tr>
+<tr><td>7</td><td><b>反映・公開</b>：作業ブランチで保存し、内容を確かめてから、公開サイト（メタハブ）へ反映する。</td><td>更新記録、課題リストの状態</td><td class="st">運用中</td></tr>
+</tbody></table>
+<h2>再現性のための決まり</h2>
+<ul><li>同じ検索を、別の人・別のAIが同じ手順でやり直せるよう、検索語・日付・見たもの・採否・理由を残す。</li>
+<li>一次資料カードに、取得日・取得方法・取得者を書く。確認済みの資料は、改訂の疑いがない限り、再確認しない。</li>
+<li>時間がたつと出どころの記憶が薄れ、結論だけが残る（スリーパー効果）。内容に「一次未確認」などの印と出どころを、常に添える。</li>
+<li>探索元（個人サイト、まとめサイト、AIの回答）は根拠にしない。一次資料で確認できた範囲だけを、確認済みとする。</li></ul>
+<h2>役割分担</h2>
+<ul><li>ポータル側のClaude：台帳・資料カード・サイト・印刷物の作成、公開への反映。</li>
+<li>コードスペースのClaude：PDFの取得と全文の抽出、突き合わせ。</li>
+<li>社用PC側のAI／ユーザー：この環境から届かないサイトの検索と、本文の貼り戻し。</li>
+<li>GEMINI：検索候補（探索元）の提示。回答は未検証として扱う。</li></ul>
+<h2>段3で記事を読み、良いものを貯める</h2>
+<ul><li>上のサイトの記事を読み、良さそうな記事のURLと、要点（言い換え）をナレッジとして貯める。会員制の記事は、本文を転載せず、リンクと1行の説明だけを載せる。</li></ul>
+<h2>決めてほしいこと</h2>
+<ul><li>段3の候補の追加（時事メディカルなど）を、4サイトに含めるか。</li>
+<li>段3で「十分」と判断する基準（例：一次資料へのリンクがあり、更新日が新しい、など）。</li>
+<li>段4の依頼者の許可：どの範囲を、事前の許可なしに行ってよいか。</li></ul>
+</div></body></html>
