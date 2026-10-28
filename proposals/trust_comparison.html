@@ -1,0 +1,46 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
+<title>資料の確証度：3つの体系の比較（たたき台）</title><style>
+:root{--bg:#fff;--fg:#222;--mut:#666;--line:#c9ced6;--hd:#eef1f5;--s:#e6f3ea;--d:#fdeacc;--u:#eceef1}
+@media(prefers-color-scheme:dark){:root{--bg:#15181d;--fg:#dde1e6;--mut:#9aa3ae;--line:#38404a;--hd:#222932;--s:#1d3326;--d:#3b2f17;--u:#272d35}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:12.5px/1.7 -apple-system,"Hiragino Sans","Noto Sans JP","Yu Gothic",sans-serif}
+.w{max-width:1180px;margin:0 auto;padding:14px 18px 40px}
+h1{font-size:16px;margin:0 0 4px}h2{font-size:13.5px;margin:24px 0 6px;border-bottom:2px solid var(--line);padding-bottom:3px}
+.note{color:var(--mut);font-size:11.5px;margin:0 0 8px}
+.pbar{display:flex;gap:14px;align-items:center;margin:0 0 8px}.pbar button{font:inherit;cursor:pointer;padding:3px 12px}
+table{border-collapse:collapse;width:100%;margin:6px 0}th,td{border:1px solid var(--line);padding:5px 8px;vertical-align:top;text-align:left}
+th{background:var(--hd);font-size:12px;white-space:nowrap}
+td.j{text-align:center;font-weight:700;white-space:nowrap}td.j.same{background:var(--s)}td.j.diff{background:var(--d)}td.j.unk{background:var(--u)}
+td.n{color:var(--mut);font-size:11.5px}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.box{border:1px solid var(--line);padding:6px 10px}.box h3{font-size:12.5px;margin:0 0 4px}.box ul{margin:0;padding-left:1.3em}
+.ord{font:11.5px ui-monospace,Menlo,monospace}
+@media(max-width:800px){.cols{grid-template-columns:1fr}th,td{font-size:12px}}
+@media print{@page{size:A4 landscape;margin:10mm}:root{--bg:#fff;--fg:#000;--mut:#333;--line:#888;--hd:#fff;--s:#fff;--d:#fff;--u:#fff}body{font-size:9pt;line-height:1.5}.pbar{display:none}.w{max-width:none;padding:0}
+td.j.same::before{content:"〇 "}td.j.diff::before{content:"▲ "}td.j.unk::before{content:"？ "}tr,.box,table{break-inside:avoid}h2{break-after:avoid}}
+</style></head><body><div class="w">
+<div class="pbar"><button type="button" onclick="window.print()">印刷する（A4横）</button><span class="note" style="margin:0">たたき台（2026-10-28 版）。検討用の資料です。</span></div>
+<h1>資料の確証度：3つの体系の比較</h1>
+<p class="note">比べる3つ：①現行サイトのタグ ②ユーザーのメモ（次数×査読。「1022_信頼度評価」） ③GEMINIの「情報データパイプライン・マトリクス」。検討メモ：<span class="ord">docs/reference/pipeline_matrix_notes.md</span></p>
+<h2>1. 資料の種類ごとの当てはめ（一致 / 相違 / 未定）</h2>
+<table><thead><tr><th>資料の種類</th><th>① 現行サイト</th><th>② メモ（次数×査読）</th><th>③ GEMINI（8つの型）</th><th>判定</th><th>ひとこと</th></tr></thead><tbody><tr class="diff"><td>添付文書・インタビューフォーム・厚労省通知・PMDAの審査資料</td><td>1次:公的</td><td>［2°］［Preprint］（PMDAや公的機関のまとめ）※添付文書そのものの記載はなし</td><td>Reg-1st（行政が確定した事実）</td><td class="j diff">相違</td><td class="n">メモはPMDAを「公的機関のまとめ」（2次・査読なし）に置く。GEMINIは独立の型にする。現行は1次。</td></tr><tr class="diff"><td>公的なマスタ・統計（HOTコード、供給状況など）</td><td>1次:公的</td><td>［2°］［Preprint］（公的機関）</td><td>Reg-1st</td><td class="j diff">相違</td><td class="n">同上</td></tr><tr class="same"><td>査読済みの原著論文</td><td>（専用のタグなし）</td><td>［1°］［Reviewed］</td><td>Reviewed-Sci-1st</td><td class="j same">一致</td><td class="n">メモとGEMINIは一致。現行サイトには専用のタグがない。</td></tr><tr class="same"><td>プレプリント・学会速報</td><td>（専用のタグなし）</td><td>［1°］［Preprint］</td><td>Unreviewed-Sci-1st</td><td class="j same">一致</td><td class="n">一致。</td></tr><tr class="unk"><td>システマティックレビュー・メタ解析</td><td>2次:DB/GL</td><td>［2°］［Reviewed］</td><td>（表にない）</td><td class="j unk">未定</td><td class="n">GEMINIの表に置き場がない。</td></tr><tr class="diff"><td>診療ガイドライン・教科書・白書</td><td>2次:DB/GL</td><td>［3°］［Reviewed］（最高位）</td><td>Reviewed-Sys-3rd（最高位）</td><td class="j diff">相違</td><td class="n">メモとGEMINIは一致して「3次・最高位」。現行は「2次」で、数字が逆。</td></tr><tr class="diff"><td>病院薬剤部のDI・レジメン、クリニック・医師の解説</td><td>3次:病院/医師</td><td>［2°］［Preprint］（大学病院のまとめ・信頼できるクリニック）</td><td>Clin-2.5th（臨床家の翻訳）</td><td class="j diff">相違</td><td class="n">メモは「2次・査読なし」、GEMINIは「2.5次」、現行は「3次」。呼び方が三者で違う。</td></tr><tr class="unk"><td>製薬企業のHCPサイト・RMP・指導資材</td><td>3次:メーカー</td><td>（記載なし）</td><td>（表にない）</td><td class="j unk">未定</td><td class="n">どちらの案にも置き場がない。</td></tr><tr class="unk"><td>薬剤師・薬局の実務サイト、ブログ</td><td>3次:薬剤師</td><td>［3°］［Preprint］（個人的発信）</td><td>（医師ではないため2.5次か不明）</td><td class="j unk">未定</td><td class="n">個人的発信として扱うか、実務の専門家として扱うかが分かれる。</td></tr><tr class="unk"><td>検査会社・食品メーカーの健康情報</td><td>2次:DB/GL ／ 3次:薬剤師 が混在</td><td>（記載なし）</td><td>（表にない）</td><td class="j unk">未定</td><td class="n">現行でも付け方が揃っていない。</td></tr><tr class="diff"><td>大手ニュース・業界メディア（日経DI、m3、時事など）</td><td>3次:DB解説 など</td><td>［3°］［Preprint］相当</td><td>Hyper-4th（根拠に使わない）</td><td class="j diff">相違</td><td class="n">GEMINIは「根拠に使わない」領域に置く。現行サイトにはリンクとして載っている。</td></tr><tr class="same"><td>まとめサイト、SNS、匿名ブログ</td><td>（載せない）</td><td>［n=1］［Anecdotal］／［3°］［Preprint］</td><td>Pseudo-n（破棄）</td><td class="j same">一致</td><td class="n">根拠に使わない点は一致。</td></tr><tr class="same"><td>本ポータルの判断（予防原則など）</td><td>自作</td><td>（記載なし）</td><td>（表にない。別枠）</td><td class="j same">一致</td><td class="n">どちらの案にも無いので、別枠で残す。</td></tr></tbody></table>
+<p class="note">判定：「一致」＝②と③が同じ位置づけ／「相違」＝体系ごとに位置づけが違う／「未定」＝置き場所がどちらかの案にない。</p>
+<h2>2. 信頼度の並べ方（高い → 低い）</h2>
+<div class="cols">
+<div class="box"><h3>① 現行サイト</h3><ul><li>順位は付けていない</li><li>種類の区別だけ：1次（公的）／2次（ガイドライン・DB）／3次（現場・企業の発信）／自作</li></ul></div>
+<div class="box"><h3>② メモ（次数×査読）</h3><div class="ord">［3°］［Reviewed］<br>＞［2°］［Reviewed］<br>＞［1°］［Reviewed］＝［1°］［Preprint］<br>＞［2°］［Preprint］<br>＞［3°］［Preprint］<br>＞［n=1］［Anecdotal］</div></div>
+<div class="box"><h3>③ GEMINI（8つの型）</h3><ul><li>一列の順位は示していない</li><li>「信頼エリア」：Raw／Reviewed-Sci／Reg／Unreviewed-Sci／Clin-2.5th／Reviewed-Sys-3rd</li><li>「根拠に使わないエリア」：Hyper-4th／Pseudo-n</li></ul></div></div>
+<h2>3. 体系の特徴の比較</h2>
+<table><thead><tr><th></th><th>① 現行サイト</th><th>② メモ</th><th>③ GEMINI</th></tr></thead><tbody>
+<tr><th>考え方</th><td>資料の性質で分ける</td><td>次数（何次か）×査読（有無）の2つの軸</td><td>原本立脚性（一次にたどれるか）×加工度（編集がどれだけ入るか）の2つの軸</td></tr>
+<tr><th>規制文書（添付文書・通知）</th><td>1次:公的</td><td>明示なし（PMDAは「公的機関のまとめ」＝2次・査読なし）</td><td>独立の型 Reg-1st</td></tr>
+<tr><th>「3次」の意味</th><td>病院・医師・薬剤師・メーカーの発信</td><td>ガイドライン・教科書（最高位）</td><td>ガイドライン・白書（最高位）</td></tr>
+<tr><th>文字の装飾</th><td>1次の題名を斜体。タグは色分け</td><td>—</td><td>1次＝斜体、2.5次＝下線、3次＝太字、根拠に使わないもの＝等幅</td></tr>
+<tr><th>長所</th><td>すでに実装済み。分かりやすい</td><td>査読の有無が明示される。順位が付く</td><td>規制文書の置き場がある。「一次にたどれるか」が基準で、台帳（V-xx）の運用と合う</td></tr>
+<tr><th>注意点</th><td>「3次」がメモ・GEMINIと逆の意味。査読の区別がない</td><td>添付文書の置き場が不明。原稿の段階</td><td>「JIS／W3C準拠」は未確認。等幅の意味がURL表示と衝突。表現が公開向きでない。%は目安</td></tr>
+</tbody></table>
+<h2>4. 決めること</h2>
+<ol><li>「3次」の意味を、メモ・GEMINIに合わせて（ガイドライン＝最高位）改めるか。その場合、現行サイトのタグは名前を付け替える。</li>
+<li>添付文書・通知を、独立の型（Reg）にするか、メモのように「公的機関のまとめ」に入れるか。</li>
+<li>「未定」の行（システマティックレビュー、製薬企業の資材、薬剤師の実務サイト、検査会社・メーカーの健康情報）の置き場所。</li>
+<li>ニュース・業界メディアを、根拠に使わない扱いにするか（現行サイトにはリンクとして載っている）。</li></ol>
+</div></body></html>
