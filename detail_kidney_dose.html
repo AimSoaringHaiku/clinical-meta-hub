@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><title>腎臓：薬の注意レベル（案・詳細）</title><style>
+:root{--bg:#fff;--fg:#222;--mut:#777;--line:#d5d9df;--acc:#1a5f7a;--code:#f3f4f6;--hover:#f1f4f7;--open:#d6e6f5;--faint:#a3acb8;--c1:#1a5fb4;--c2:#1e7a46;--c3:#a66200;--c4:#6f42c1}
+@media (prefers-color-scheme:dark){:root{--bg:#15181d;--fg:#dde1e6;--mut:#8b94a0;--line:#2e343c;--acc:#6ab7d0;--code:#1f242b;--hover:#1b222a;--open:#243a50;--faint:#5f6b78;--c1:#6aa6f0;--c2:#5fc088;--c3:#e0a84a;--c4:#b18cf0}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:12px/1.7 -apple-system,"Hiragino Sans","Noto Sans JP","Yu Gothic",system-ui,sans-serif}
+.w{max-width:1000px;margin:0 auto;padding:12px 16px 40px}
+h1{font-size:14px;margin:0 0 6px}
+.bar{display:flex;gap:12px;align-items:center;margin:0 0 10px;font-size:12px;color:var(--mut);flex-wrap:wrap}
+.bar input{flex:1 1 220px;min-width:0;font:inherit;padding:4px 8px;border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:3px}
+.pm{position:relative}.pm summary{cursor:pointer;color:var(--acc);text-decoration:underline;list-style:none}.pm summary::-webkit-details-marker{display:none}
+.pm div{position:absolute;z-index:5;top:1.6em;left:0;background:var(--bg);border:1px solid var(--line);border-radius:3px;padding:4px 10px;display:flex;flex-direction:column;gap:2px;white-space:nowrap}
+a[href^="detail_"]{display:inline-block;border:1px solid var(--acc);border-radius:3px;padding:0 8px;text-decoration:none;font-size:11.5px}
+.bar a,.bar button{font:inherit;color:var(--acc);cursor:pointer;text-decoration:underline;background:none;border:none;padding:0}
+details{margin:0}
+summary{cursor:pointer;padding:2px 0;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";display:inline-block;width:14px;color:var(--mut);font-family:ui-monospace,Menlo,monospace}
+details[open]>summary::before{content:"\2212"}
+.l{font-weight:600}
+.nd.t0>summary .l{font-size:13px}
+.d{color:var(--mut);margin-left:10px;font-weight:400}
+.nb{margin-left:9px;padding-left:12px;border-left:1px solid var(--line)}
+.nb>p,.nb>ul,.nb>ol,.nb>.tbl,.nb>.code,.nb>h4,.nb>.flow{margin-left:6px}
+.nb p{margin:4px 0}.nb ul,.nb ol{margin:3px 0;padding-left:1.5em}.nb ul{list-style:disc}.nb ul ul{list-style:circle}.nb ul ul ul{list-style:square}.nb li{margin:2px 0;padding-left:.15em}.nb ul.lks{padding-left:0;list-style:none}
+.nb h4{font-size:12px;margin:8px 0 2px}
+.nb hr{display:none}
+p.old{color:var(--mut);font-size:11px}
+.bd{display:inline-block;font-size:10px;line-height:1.4;color:var(--mut);border:1px solid var(--line);border-radius:2px;padding:0 4px;margin:0 3px;font-weight:400;white-space:nowrap}
+.bd.b1{color:var(--c1);border-color:var(--c1)}.bd.b2{color:var(--c2);border-color:var(--c2)}.bd.b3{color:var(--c3);border-color:var(--c3)}.bd.bo{color:var(--c4);border-color:var(--c4)}
+.key{font-size:11px;color:var(--mut);margin:0 0 8px}
+details.nd>summary{border-left:4px solid transparent;padding-left:4px}
+details.nd>summary:hover{background:var(--hover)}
+details.nd[open]>summary{background:var(--open);border-left-color:var(--acc);font-weight:600}
+details.nd[open]>summary::before{color:var(--acc);font-weight:700}
+details.nd[open]>.nb{border-left:2px solid var(--acc)}
+details.nd:target>summary,details.nd.hit>summary{outline:2px solid var(--acc);outline-offset:1px}
+ul.lks{list-style:none;margin:1px 0;padding:0}
+li.lk{padding:2px 0 2px 14px}
+li.lk a{color:var(--fg);text-decoration:none;display:flex;gap:10px;align-items:baseline}
+li.lk .bw{flex:0 0 7.8em;min-width:0}
+li.lk .m{flex:1 1 auto;min-width:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+li.lk .t{font-weight:500}
+li.lk.k1 .t{font-style:italic}
+li.lk a:hover .t{color:var(--acc);text-decoration:underline}
+li.lk .d{margin-left:8px;color:var(--mut)}
+li.lk .u{flex:0 0 17em;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--faint);font:9.5px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace}
+.up{display:none}
+.mono,a.url,code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.mono{font-size:.95em}
+.lgroup{margin:3px 0 3px 6px}.lg-h{font-weight:600;padding-left:14px}.lg-d{color:var(--mut);padding-left:14px}
+.lgroup>ul.lks{margin-left:12px}
+a{color:var(--acc)}
+code{background:var(--code);padding:0 3px;border-radius:2px;font-size:11px;word-break:break-all}
+.code{background:var(--code);border-radius:3px;margin:4px 0;overflow-x:auto}.code pre{margin:0;padding:6px 8px;font:11px/1.5 ui-monospace,Menlo,monospace;white-space:pre-wrap;word-break:break-all}
+.code .lang{display:none}
+.tbl{overflow-x:auto;margin:4px 0}
+table{border-collapse:collapse;width:100%;font-size:11.5px}
+th,td{border:1px solid var(--line);padding:3px 6px;vertical-align:top;text-align:left}
+th{background:var(--code);font-weight:600}
+.about>summary,.about>summary .l{font-weight:400;color:var(--mut)}
+.empty{color:var(--mut);padding:16px 0}
+footer{color:var(--mut);font-size:10.5px;margin-top:24px;line-height:1.6}
+.flow{margin:6px 0;overflow-x:auto}
+.f-box{display:inline-block;max-width:34em;border:1px solid var(--fg);background:var(--bg);border-radius:3px;padding:2px 8px;font-size:11.5px;line-height:1.5}
+.f-box.f-q{border-style:dashed;font-weight:600}
+.f-box.ok,.f-box.info{border-width:2px}.f-box.ng{color:var(--mut);border-color:var(--mut)}
+.f-kids{list-style:none;margin:1px 0 2px 14px;padding:0 0 0 14px;border-left:1px solid var(--line)}
+.f-kids>li{margin:3px 0}
+.f-edge{display:inline-block;font-size:10.5px;color:var(--mut);border:1px solid var(--line);border-radius:2px;padding:0 6px;margin:0 6px 2px 0}
+.nb .gantt,.nb details>summary.small{font-size:11px}
+@media (max-width:640px){body{font-size:12px}li.lk{padding:3px 0 3px 14px}li.lk a{flex-wrap:wrap}li.lk .bw{flex-basis:7em}li.lk .m{flex-basis:calc(100% - 8em)}li.lk .u{flex:1 0 100%;text-align:left;padding-left:8em}}
+@media all{
+  @page{size:A4;margin:12mm}
+  :root{--bg:#fff;--fg:#000;--mut:#333;--line:#999;--acc:#000;--code:#fff}
+  body{background:#fff;color:#000;font-size:9.5pt;line-height:1.45}
+  .w{max-width:none;padding:0}
+  .bar,.empty{display:none !important}
+  a,li.lk a{color:#000;text-decoration:none}
+  li.lk{break-inside:avoid;padding-left:12px}
+  li.lk a{display:block}
+  li.lk .bw{display:inline-block;margin-right:6px}
+  li.lk .m{display:inline;overflow:visible}
+  li.lk.k1 .t{font-style:italic}
+  details.nd>summary{border-left:none}
+  details.nd[open]>.nb{border-left:1px solid #999}
+  .up{display:inline}
+  li.lk .u,li.lk .d,.d{white-space:normal;overflow-wrap:anywhere}
+  li.lk .u{display:block;text-align:left;margin-left:0;font-size:7.5pt;color:#333;overflow:visible;white-space:normal;overflow-wrap:anywhere}
+  .d{display:inline}
+  summary{break-after:avoid}
+  summary::before{display:none}
+  table,.tbl,.code,.flow,.f-box,.lgroup,li.lk,tr{break-inside:avoid}
+  .nd.t0{break-before:page}.nd.t0:first-of-type{break-before:auto}
+  .bd,.bd.b1,.bd.b2,.bd.b3,.bd.bo{color:#000;border-color:#000}
+  .key{color:#000}
+  details.nd[open]>summary{background:none}
+  .code,th{background:#fff}.code pre{white-space:pre-wrap}
+  footer{color:#000}
+  .tbl{overflow:visible}
+}
+.pbar{display:flex;gap:14px;align-items:center;margin:0 0 10px}.pbar button{font:inherit;cursor:pointer}.xr{margin-left:10px;font-size:10.5px;white-space:nowrap}.xr a{color:var(--acc)}@media print{.pbar{display:none !important}}.w{padding:12px 18px}.lead{color:var(--mut);font-size:12px;margin:0 0 8px}</style></head><body><div class="w"><div class="pbar"><button type="button" onclick="window.print()">印刷ダイアログを開く</button><a href="index.html#s1-2">サイトの該当項目へ戻る</a><a href="index.html">サイトのトップ</a></div><h1>腎臓：薬の注意レベル（案・詳細）</h1><div id="tree"><div class="lead"><p>臓器別の減量（腎臓→肝臓→骨髄→心臓→その他）のうち、腎臓の詳細です。情報量が多いため、サイトの 1-2 には要約だけを置き、本文はここにまとめています。</p></div><details open class="nd t1" id="d-1" open><summary><span class="l">この頁の位置づけ（必読）</span><span class="d" title=""></span></summary><div class="nb"><ul><li><strong>出どころ</strong>：GEMINIの回答（<span class="mono">2026-10-28</span>）。GEMINIは「資料の本文を開いて確認した」と報告していますが、<strong>こちら（Claude）はまだ原文を取得できておらず、確認できていません</strong>（台帳 <span class="mono">P-15</span>）。</li><li><strong>扱い</strong>：以下の内容はすべて「探索元」で、<strong>未検証</strong>です。確認の狙いは、原文（学会の一覧表、ガイドライン、添付文書）で、薬名・区分・投与量が一致するかを見ることです。</li><li><strong>数値は載せていません</strong>。GEMINIが書いた閾値・用量は、原文で確認できるまで、この頁に写しません（ルール4）。回答の全文は、貼り付けた会話の中にだけあります。</li></ul></div></details><details open class="nd t1" id="d-2" open><summary><span class="l">分類の考え方：肝機能と同じ3段階でよいか（GEMINIの反論・案）</span><span class="d" title="肝機能は「予測できるか、できないか」という1本の軸で3段階に分けられました。GEMINIは、腎臓は同じ形にすると現場の判断を誤らせるおそれがある、と述べています…">肝機能は「予測できるか、できないか」という1本の軸で3段階に分けられました。GEMINIは、腎臓は同じ形にすると現場の判断を誤らせるおそれがある、と述べています…</span></summary><div class="nb"><ul><li><strong>観点1（腎機能が低下した時の投与量・禁忌）</strong><ul><li>腎機能（CCr・eGFR）の複数の区分で、減量・禁忌の境目が動く。薬を「高・中・低」とランク付けしても、現場の判断に直結しない、という主張。</li><li>案：腎機能の閾値別に、「軽度低下から早期に減量・禁忌になる薬」「中等度〜高度低下で段階的に減量・間隔延長する薬」「添付文書は禁忌だが臨床では減量・血中濃度測定で使われる薬（乖離）」「腎機能によらず減量不要な薬」の4分類。</li></ul></li><li><strong>観点2（薬による腎障害）</strong><ul><li>警戒度の高低ではなく、起こり方（機序）で分けないと、指導が逆になる、という主張。</li><li>案：A）腎血流が下がるタイプ（脱水・体調不良時の休薬指導が中心）／B）尿細管などへの直接の障害タイプ（事前の輸液・血中濃度測定・投与期間の制限が中心）／C）アレルギー性の間質性腎炎タイプ（予測できないので、発熱・発疹・尿量減少の初期症状の教育が中心）の3分類。</li></ul></li><li><strong>評価の指標の取り違え</strong>：固定用量の薬には、体表面積で補正しない個別のeGFR（mL/min）、体格あたりの用量の薬（mg/kg・mg/m²）には、標準化したeGFR（mL/min/1.73m²）を使う。取り違えると、小柄な高齢者で過量になる、とされる（GEMINIが、平田氏の資料と学会の一覧表から読み取ったと報告）。</li></ul><p><strong>決定（<span class="mono">2026-10-28</span>、ユーザー経由でGEMINIの推奨を採用）</strong>：肝機能の3段階には合わせず、観点1は腎機能の閾値別（個別eGFRと標準化eGFRの使い分けを前提ルールとする）、観点2は起こり方（機序）別に分ける。ただし、各区分の中身は原文確認前で、表はまだ作りません。この決定を取り消す場合は、ユーザーが指示します。</p></div></details><details open class="nd t1" id="d-3" open><summary><span class="l">観点1：GEMINIが挙げた薬の例（数値なし・未検証）</span><span class="d" title=""></span></summary><div class="nb"><div class="tbl"><table><thead><tr><th>分類（GEMINI案）</th><th>薬の例</th><th>GEMINIが根拠とした資料</th></tr></thead><tbody><tr><td>軽度〜中等度の低下から減量・禁忌</td><td>S-1（テガフール・ギメラシル・オテラシル）、パリペリドン、シベンゾリン、メトホルミン、ブホルミン、ベザフィブラート</td><td>資料1〜3</td></tr><tr><td>乖離（添付文書は禁忌、臨床では減量・TDM）</td><td>炭酸リチウム</td><td>資料1・3</td></tr><tr><td>段階的な減量・間隔延長</td><td>ガバペンチン、スルピリド、レボフロキサシン、セフェピム、アシクロビル・バラシクロビル、アロプリノール</td><td>資料1・3・5</td></tr><tr><td>腎機能によらず減量不要</td><td>ニフェジピンなどのCa拮抗薬、セフトリアキソン、ミノサイクリン、ドキシサイクリン、アジスロマイシン、クリンダマイシン、リネゾリド、ミカファンギン</td><td>資料3・5</td></tr><tr><td>注意が必要な例外</td><td>ボリコナゾール注射剤（溶解液の添加物が腎機能低下で蓄積するため、経口への切り替えが記載されているとされる）</td><td>資料5</td></tr></tbody></table></div></div></details><details open class="nd t1" id="d-4" open><summary><span class="l">観点2：GEMINIが挙げた薬の例（数値なし・未検証）</span><span class="d" title=""></span></summary><div class="nb"><div class="tbl"><table><thead><tr><th>起こり方（GEMINI案）</th><th>薬の例</th><th>根拠資料</th></tr></thead><tbody><tr><td>直接の障害・血中濃度測定が必要</td><td>バンコマイシン、テイコプラニン、アミノグリコシド系、シスプラチン、アムホテリシンBリポソーム、炭酸リチウム</td><td>資料1・3・4・5</td></tr><tr><td>造影剤・蓄積しやすい薬</td><td>ヨード造影剤、ガドリニウム造影剤、アクタリット、デュロキセチン</td><td>資料1・3</td></tr><tr><td>腎血流の低下（NSAIDs・RAS阻害薬・利尿薬）</td><td>GEMINIは、開けた範囲に記載がなかったため「記憶・未確認」とし、表に入れていない</td><td>―</td></tr><tr><td>アレルギー性の間質性腎炎</td><td>GEMINIは、該当ページに届かなかったため「未確認」とし、列挙していない</td><td>―</td></tr></tbody></table></div></div></details><details open class="nd t1" id="d-5" open><summary><span class="l">透析患者での投与可否（GEMINIの整理・未検証）</span><span class="d" title=""></span></summary><div class="nb"><ul><li>通常用量でよいとされる例：セフトリアキソン、アジスロマイシン、クリンダマイシン、ミノサイクリン、ドキシサイクリン、リネゾリド、ミカファンギン、Ca拮抗薬。</li><li>減量・間隔延長・透析後投与とされる例：ガバペンチン、スルピリド、バンコマイシン、セファゾリン、アシクロビル・バラシクロビル、アロプリノール、チアプリド、ジゴキシン、レボフロキサシン、ダプトマイシン。</li><li>禁忌とされる例：シベンゾリン、ソタロール、ベザフィブラート、メトホルミン、ブホルミン、パリペリドン、ベンラファキシン、デュロキセチン、ボリコナゾール注射剤。</li></ul></div></details><details open class="nd t1" id="d-6" open><summary><span class="l">資料の確認状況（GEMINIの報告）</span><span class="d" title=""></span></summary><div class="nb"><div class="tbl"><table><thead><tr><th>番号</th><th>資料</th><th>GEMINIの報告</th><th>こちらの状況</th></tr></thead><tbody><tr><td>1</td><td>日本腎臓病薬物療法学会 投与量一覧（2022年改訂・35版とされる）</td><td>1〜3ページを確認</td><td>未取得</td></tr><tr><td>2</td><td>千葉大学病院 S-1の腎機能による初回投与量</td><td>1ページ全文を確認</td><td>未取得</td></tr><tr><td>3</td><td>平田純生「透析患者における薬剤の適正使用」（日本透析医会雑誌 23巻2号、2008年とされる）</td><td>275〜277ページを確認</td><td>未取得。年が古いため、新しい資料での再確認が必要</td></tr><tr><td>4</td><td>平田の薬剤師塾の資料（2019年11月）</td><td>1〜5ページを確認</td><td>未取得</td></tr><tr><td>5</td><td>埼玉協同病院 抗菌薬腎機能別投与法一覧（2025年4月改訂とされる）</td><td>1ページ全文を確認</td><td>未取得</td></tr><tr><td>6</td><td>薬剤性腎障害 診療ガイドライン2016</td><td>冒頭6ページのみ（各論は未読）</td><td>未取得</td></tr><tr><td>7</td><td>腎不全患者のための緩和ケアガイダンス（2025年9月）</td><td>冒頭6ページのみ</td><td>未取得</td></tr><tr><td>8</td><td>CTCAE v6.0 日本語訳 JCOG版</td><td>冒頭6ページのみ（腎・尿路は未読）</td><td>未取得</td></tr><tr><td>9</td><td>学会研究会のPDF（2012年）</td><td>アクセスエラーで開けず</td><td>未取得</td></tr></tbody></table></div></div></details><details open class="nd t1" id="d-7" open><summary><span class="l">次の作業</span><span class="d" title=""></span></summary><div class="nb"><ol><li>原文を取得して、全ページをテキスト抽出し、上の薬名・区分・用量を突き合わせる（コードスペースに依頼。依頼文：<code>docs/work_request_kidney_pdf_extract.md</code>）。</li><li>確認できた内容だけを、サイトの表にする。確認できないものは、未検証のまま残す。</li><li>分類の考え方は決定済み（上記）。原文確認が済んだ区分から、閾値別・機序別の表を作る。</li><li>腎血流の低下（NSAIDsなど）と、アレルギー性の間質性腎炎は、ガイドラインの各論（資料6）で確認する。</li></ol></div></details></div><footer>内容は参考情報であり、実務判断は必ず1次資料（添付文書・IF・ガイドライン）で裏取りしてください。</footer></div><script></script></body></html>
