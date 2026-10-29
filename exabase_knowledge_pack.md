@@ -20,7 +20,7 @@
 | **🌐 ネット・3次ナレッジ** | content/03_net_knowledge.md | 3-1 病院DI・レジメン・パス（Tier S/A/B）／3-2 吸入「三種の神器」・デバイス管理／3-3 診療科別クリニック解説／3-4 実務薬剤師・検査値翻訳・ニュース・著作権ルール |
 | **🏢 メーカー・政策** | content/04_makers_policy.md | 4-1 PhindMI／4-2 RMP・資材・くすりのしおり／4-3 疾患啓発（DTC）の死角と補完／4-4 シンクタンク |
 | **🛠️ 自作ツール・安全性** | [STATUS_REPORT.md](STATUS_REPORT.md) | 公開中ツール3件・今後の整備課題・静的ページの安全性 |
-| **開発ロードマップ** | [ROADMAP.md](ROADMAP.md) | 優先課題・TODO・ガントチャート |
+| **開発ロードマップ** | [ROADMAP.md](ROADMAP.md) | 優先課題・TODO・今後の作業の候補 |
 | **AI共通ルール・連携** | [CLAUDE.md](CLAUDE.md) / [project_manifest.json](project_manifest.json) | 複数リポジトリ間のLLM連携 |
 | **運用ファイル** | [wishlist.md](wishlist.md) / [CHANGELOG.md](CHANGELOG.md) / [STATUS_REPORT.md](STATUS_REPORT.md) / [docs/development_log.md](docs/development_log.md) | 依頼の棚卸しと達成率、更新記録、業務報告、設計メモ |
 | **公開用ビュー** | [docs/index.html](docs/index.html) | 検索・タブ付き単一HTML（GitHub Pages用） |
