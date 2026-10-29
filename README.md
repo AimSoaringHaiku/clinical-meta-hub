@@ -17,6 +17,7 @@
 | ファイル | 内容 |
 | :--- | :--- |
 | `index.html` | ナレッジ一覧（タブ切替・検索）。単一ファイルの静的HTML |
+| `sitemap.html` | サイトマップ（公開サイトのページ一覧と、重なり・関連）。トップのヘッダーからも開ける |
 | `roadmap.html` | 開発ロードマップ（優先課題・TODO・作業の候補） |
 | `print_links.html` / `print_notes.html` / `print.html` | A4印刷用の画面（リンク集だけ／解説・事例だけ／全部）。トップの「印刷」メニューからも開ける |
 | `detail_iron_tea.html` / `detail_inhaler.html` / `detail_kidney_dose.html` | 詳細ページ（鉄剤とお茶／吸入ステロイドの用量／腎臓：薬の注意レベル案）。トップの「詳細ページ」メニューからも開ける |
