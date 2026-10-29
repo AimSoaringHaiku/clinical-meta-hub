@@ -165,6 +165,12 @@ https://www.mhlw.go.jp/content/12400000/000615888.pdf
 | **薬価・HOT・JANマスタ**<br>【1次:公的】 | ・診療報酬情報提供サービス（厚労省）<br>・医薬品HOTコードマスター（MEDIS）<br>・日本医薬品一般的名称（JAN）DB<br>・基本マスター（HPDX） | 診療報酬情報提供サービス（厚労省）：https://shinryohoshu.mhlw.go.jp/shinryohoshu/searchMenu/doSearchInputYp<br>医薬品HOTコードマスター（MEDIS）：https://www2.medis.or.jp/hcode/<br>日本医薬品一般的名称（JAN）DB：https://jpdb.nihs.go.jp/jan/<br>基本マスター（HPDX）：https://www.hpdx.or.jp/smph/seikyushiharai/tensuhyo/kihonmasta/r06/kihonmasta_04.html |
 | **OTC・妊産婦・ドーピング**<br>【1次:公的】 | ・日本一般用医薬品連合会 / OTC版DSU<br>・国立成育医療研究センター（授乳と薬）<br>・日本スポーツ協会（アンチ・ドーピング） | 日本一般用医薬品連合会：https://www.jsmi.jp/<br>OTC版DSU：https://www.jfsmi.jp/dsu_info.html<br>国立成育医療研究センター 授乳と薬：https://www.ncchd.go.jp/kusuri/lactation/<br>日本スポーツ協会 アンチ・ドーピング：https://www.japan-sports.or.jp/medicine/doping/tabid537.html |
 
+### 🏛️ 制度の議論・規制改革（内閣府）
+ユーザー提示（2026-10-29）。RMPの法制化や、再審査期間の満了前のRMP前倒し終了などの「制度の背景」を調べる時に経由する、とされる（GEMINIの説明・未検証）。取得時は接続できず、題名・内容は未確認。
+
+- **内閣府（トップ）** 【1次:公的】 🔍一次未確認・未取得（ホスト許可待ち。ユーザー指定）。規制改革推進会議などの資料が公開されている、とされる → https://www.cao.go.jp/
+- **内閣府の資料PDF（110228_shiryou5.pdf）** 【1次:公的】 🔍一次未確認・未取得。ユーザーが、RMPの法制化の議論の資料として挙げた。ただし、URLの階層は「consumer」（消費者委員会の資料とみられる）で、RMPに関する資料かは未確認 → https://www.cao.go.jp/consumer/history/01/kabusoshiki/tokuho/doc/110228_shiryou5.pdf
+
 ---
 
 ## 1-4. 救急医療3階層・疾患レジストリ・行政ナビ
